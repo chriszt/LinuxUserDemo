@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "remote dbg",
+            "type": "cppdbg",
+            "request": "launch",  // 请求配置类型，有两个launch和attach
+            "program": "SdJournalDemo",  // gdb要加载的二进制文件名称或路径
+            "args": [],  // 二进制文件的启动参数
+            "stopAtEntry": true,
+            "cwd": "/home/yl/proj/SdJournalTest/build",  // 二进制文件运行的工作路径
+            "environment": [],  // 二进制文件运行时的环境变量
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "pipeTransport": {  // 远程服务器的连接设置，第一次需要运行$ plink -C -N -D 127.0.0.1:7000 yl@192.168.56.2 -pw a
+                "pipeCwd": "",
+                "pipeProgram": "/usr/bin/plink",
+                "pipeArgs": ["-ssh", "yl@192.168.56.2", "-pw", "a"],
+                "debuggerPath": "/usr/bin/gdb"
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "sourceFileMap": {  // 远程服务器的文件路径和本地文件映射
+                "/home/yl/proj/SdJournalTest":"/home/yl/proj/LinuxDemo/SdJournalDemo"
+            },
+            "logging": {
+                "trace": false,
+                "traceResponse": false,
+                "engineLogging": false
+            }
+        }
+    ]
+}

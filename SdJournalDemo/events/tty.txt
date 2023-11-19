@@ -1,0 +1,24 @@
+// 登陆成功
+[TTY] Log: MESSAGE=pam_unix(login:session): session opened for user user1 by LOGIN(uid=0)
+[TTY] Hit: MESSAGE=pam_unix\(login:session\): session opened for user (\w+) by LOGIN\(uid=\d\)
+type=1, time=1694658488601132, bLoginSuccess=1, loginType=5, clientIp=, clientWorkstation=vm, loginUser=user1, loginDomain=, status=1, userId=1001, clientPort=, subjectUserId=1001
+
+// 退出
+[TTY] Log: MESSAGE=pam_unix(login:session): session closed for user user1
+[TTY] Hit: MESSAGE=pam_unix\(login:session\): session closed for user (\w+)
+type=2, time=1694658507091274, bLoginSuccess=0, loginType=5, clientIp=, clientWorkstation=vm, loginUser=user1, loginDomain=, status=3, userId=1001, clientPort=, subjectUserId=1001
+
+// 用户名正确，密码错误
+[TTY] Log: MESSAGE=FAILED LOGIN (1) on '/dev/tty3' FOR 'user2', Authentication failure
+[TTY] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/tty\d' FOR '(\w+)', Authentication failure
+type=1, time=1694658538419889, bLoginSuccess=0, loginType=5, clientIp=, clientWorkstation=vm, loginUser=user2, loginDomain=, status=2, userId=1002, clientPort=, subjectUserId=1002
+
+// 用户名错误--1
+[TTY] Log: MESSAGE=pam_unix(login:auth): check pass; user unknown
+[TTY] Hit: MESSAGE=pam_unix(login:auth): check pass; user unknown
+type=1, time=1694658557341750, bLoginSuccess=0, loginType=5, clientIp=, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+// 密码错误--2
+[TTY] Log: MESSAGE=FAILED LOGIN (2) on '/dev/tty3' FOR 'UNKNOWN', Authentication failure
+[TTY] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/tty\d' FOR '(\w+)', Authentication failure
+type=1, time=1694658560281320, bLoginSuccess=0, loginType=5, clientIp=, clientWorkstation=vm, loginUser=UNKNOWN, loginDomain=, status=2, userId=, clientPort=, subjectUserId=

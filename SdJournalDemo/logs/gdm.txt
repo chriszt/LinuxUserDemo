@@ -1,0 +1,429 @@
+// 登陆成功
+9月 06 16:10:31 vm gdm-password][11069]: gkr-pam: unable to locate daemon control file
+9月 06 16:10:31 vm gdm-password][11069]: gkr-pam: stashed password to try later in open session
+9月 06 16:10:31 vm gdm-password][11069]: pam_unix(gdm-password:session): session opened for user yl by (uid=0)
+9月 06 16:10:31 vm systemd-logind[635]: New session 38 of user yl.
+9月 06 16:10:31 vm systemd[1]: Started Session 38 of user yl.
+9月 06 16:10:31 vm gdm-password][11069]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+
+-----------------------
+
+9月 06 16:10:31 vm gdm-password][11069]: gkr-pam: unable to locate daemon control file
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=3(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_COMM=gdm-session-wor(21)
+_EXE=/usr/lib/gdm3/gdm-session-worker(37)
+_SYSTEMD_CGROUP=/system.slice/gdm.service(41)
+_SYSTEMD_UNIT=gdm.service(25)
+SYSLOG_IDENTIFIER=gdm-password](31)
+_CMDLINE=gdm-session-worker [pam/gdm-password](46)
+MESSAGE=gkr-pam: unable to locate daemon control file(53)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=26f74e3e06994d31b41e0a92e0b96df2(55)
+SYSLOG_TIMESTAMP=Sep  6 16:10:31 (33)
+_PID=11069(10)
+_SOURCE_REALTIME_TIMESTAMP=1693987831563843(43)
+-----------------------
+
+9月 06 16:10:31 vm gdm-password][11069]: gkr-pam: stashed password to try later in open session
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_COMM=gdm-session-wor(21)
+_EXE=/usr/lib/gdm3/gdm-session-worker(37)
+_SYSTEMD_CGROUP=/system.slice/gdm.service(41)
+_SYSTEMD_UNIT=gdm.service(25)
+SYSLOG_IDENTIFIER=gdm-password](31)
+_CMDLINE=gdm-session-worker [pam/gdm-password](46)
+MESSAGE=gkr-pam: stashed password to try later in open session(62)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=26f74e3e06994d31b41e0a92e0b96df2(55)
+SYSLOG_TIMESTAMP=Sep  6 16:10:31 (33)
+_PID=11069(10)
+_SOURCE_REALTIME_TIMESTAMP=1693987831564741(43)
+-----------------------
+
+9月 06 16:10:31 vm gdm-password][11069]: pam_unix(gdm-password:session): session opened for user yl by (uid=0)
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_COMM=gdm-session-wor(21)
+_EXE=/usr/lib/gdm3/gdm-session-worker(37)
+_SYSTEMD_CGROUP=/system.slice/gdm.service(41)
+_SYSTEMD_UNIT=gdm.service(25)
+_GID=1000(9)
+_AUDIT_LOGINUID=1000(20)
+SYSLOG_IDENTIFIER=gdm-password](31)
+_CMDLINE=gdm-session-worker [pam/gdm-password](46)
+MESSAGE=pam_unix(gdm-password:session): session opened for user yl by (uid=0)(77)
+_AUDIT_SESSION=38(17)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=26f74e3e06994d31b41e0a92e0b96df2(55)
+SYSLOG_TIMESTAMP=Sep  6 16:10:31 (33)
+_PID=11069(10)
+_SOURCE_REALTIME_TIMESTAMP=1693987831575447(43)
+-----------------------
+
+9月 06 16:10:31 vm systemd-logind[635]: New session 38 of user yl.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=journal(18)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=systemd-logind(32)
+_COMM=systemd-logind(20)
+_EXE=/usr/lib/systemd/systemd-logind(36)
+_CMDLINE=/lib/systemd/systemd-logind(36)
+_CAP_EFFECTIVE=24420020f(24)
+_SYSTEMD_CGROUP=/system.slice/systemd-logind.service(52)
+_SYSTEMD_UNIT=systemd-logind.service(36)
+CODE_FILE=src/login/logind-session.c(36)
+CODE_LINE=698(13)
+CODE_FUNC=session_start(23)
+MESSAGE_ID=8d45620c1a4348dbb17410da57c60c66(43)
+USER_ID=yl(10)
+_PID=635(8)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=625f7cbfebca48f287836c8c01a0e21d(55)
+SESSION_ID=38(13)
+LEADER=11069(12)
+MESSAGE=New session 38 of user yl.(34)
+_SOURCE_REALTIME_TIMESTAMP=1693987831580983(43)
+
+-----------------------
+
+9月 06 16:10:31 vm systemd[1]: Started Session 38 of user yl.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+SYSLOG_FACILITY=3(17)
+SYSLOG_IDENTIFIER=systemd(25)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_TRANSPORT=journal(18)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_PID=1(6)
+_COMM=systemd(13)
+_EXE=/usr/lib/systemd/systemd(29)
+_CMDLINE=/sbin/init(19)
+_SYSTEMD_CGROUP=/init.scope(27)
+_SYSTEMD_UNIT=init.scope(24)
+_SYSTEMD_SLICE=-.slice(22)
+CODE_FILE=src/core/job.c(24)
+CODE_LINE=929(13)
+CODE_FUNC=job_log_done_status_message(37)
+JOB_TYPE=start(14)
+JOB_RESULT=done(15)
+MESSAGE_ID=39f53479d3a045ac8e11786248231fbf(43)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+MESSAGE=Started Session 38 of user yl.(38)
+JOB_ID=17436(12)
+UNIT=session-38.scope(21)
+INVOCATION_ID=46eabc8945b843ff83bcab40844dbffc(46)
+_SOURCE_REALTIME_TIMESTAMP=1693987831581901(43)
+
+-----------------------
+
+9月 06 16:10:31 vm gdm-password][11069]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_COMM=gdm-session-wor(21)
+_EXE=/usr/lib/gdm3/gdm-session-worker(37)
+_SYSTEMD_CGROUP=/system.slice/gdm.service(41)
+_SYSTEMD_UNIT=gdm.service(25)
+_GID=1000(9)
+_AUDIT_LOGINUID=1000(20)
+SYSLOG_IDENTIFIER=gdm-password](31)
+_CMDLINE=gdm-session-worker [pam/gdm-password](46)
+MESSAGE=gkr-pam: gnome-keyring-daemon started properly and unlocked keyring(75)
+_AUDIT_SESSION=38(17)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=26f74e3e06994d31b41e0a92e0b96df2(55)
+SYSLOG_TIMESTAMP=Sep  6 16:10:31 (33)
+_PID=11069(10)
+_SOURCE_REALTIME_TIMESTAMP=1693987831623007(43)
+-----------------------
+
+
+// 退出
+9月 06 16:11:26 vm gdm-password][11069]: pam_unix(gdm-password:session): session closed for user yl
+9月 06 16:11:26 vm systemd-logind[635]: Session 38 logged out. Waiting for processes to exit.
+9月 06 16:11:26 vm systemd-logind[635]: Removed session 38.
+
+-----------------------
+
+9月 06 16:11:26 vm gdm-password][11069]: pam_unix(gdm-password:session): session closed for user yl
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_COMM=gdm-session-wor(21)
+_EXE=/usr/lib/gdm3/gdm-session-worker(37)
+_GID=1000(9)
+_AUDIT_LOGINUID=1000(20)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=-.slice(27)
+SYSLOG_IDENTIFIER=gdm-password](31)
+_CMDLINE=gdm-session-worker [pam/gdm-password](46)
+MESSAGE=pam_unix(gdm-password:session): session closed for user yl(66)
+_AUDIT_SESSION=38(17)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_PID=11069(10)
+SYSLOG_TIMESTAMP=Sep  6 16:11:26 (33)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/session-38.scope(60)
+_SYSTEMD_SESSION=38(19)
+_SYSTEMD_UNIT=session-38.scope(30)
+_SYSTEMD_INVOCATION_ID=46eabc8945b843ff83bcab40844dbffc(55)
+_SOURCE_REALTIME_TIMESTAMP=1693987886632060(43)
+-----------------------
+
+9月 06 16:11:26 vm systemd-logind[635]: Session 38 logged out. Waiting for processes to exit.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=journal(18)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=systemd-logind(32)
+_COMM=systemd-logind(20)
+_EXE=/usr/lib/systemd/systemd-logind(36)
+_CMDLINE=/lib/systemd/systemd-logind(36)
+_CAP_EFFECTIVE=24420020f(24)
+_SYSTEMD_CGROUP=/system.slice/systemd-logind.service(52)
+_SYSTEMD_UNIT=systemd-logind.service(36)
+CODE_FILE=src/login/logind-session.c(36)
+USER_ID=yl(10)
+CODE_LINE=770(13)
+CODE_FUNC=session_stop_scope(28)
+_PID=635(8)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=625f7cbfebca48f287836c8c01a0e21d(55)
+SESSION_ID=38(13)
+LEADER=11069(12)
+MESSAGE=Session 38 logged out. Waiting for processes to exit.(61)
+_SOURCE_REALTIME_TIMESTAMP=1693987886733660(43)
+
+-----------------------
+
+9月 06 16:11:26 vm systemd-logind[635]: Removed session 38.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=journal(18)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=systemd-logind(32)
+_COMM=systemd-logind(20)
+_EXE=/usr/lib/systemd/systemd-logind(36)
+_CMDLINE=/lib/systemd/systemd-logind(36)
+_CAP_EFFECTIVE=24420020f(24)
+_SYSTEMD_CGROUP=/system.slice/systemd-logind.service(52)
+_SYSTEMD_UNIT=systemd-logind.service(36)
+CODE_FILE=src/login/logind-session.c(36)
+USER_ID=yl(10)
+CODE_LINE=827(13)
+CODE_FUNC=session_finalize(26)
+MESSAGE_ID=3354939424b4456d9802ca8333ed424a(43)
+_PID=635(8)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=625f7cbfebca48f287836c8c01a0e21d(55)
+SESSION_ID=38(13)
+LEADER=11069(12)
+MESSAGE=Removed session 38.(27)
+_SOURCE_REALTIME_TIMESTAMP=1693987886777075(43)
+-----------------------
+
+
+// 用户名正确，密码错误
+9月 06 16:51:01 vm gdm-password][12107]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=yl
+
+-----------------------
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_COMM=gdm-session-wor(21)
+_EXE=/usr/lib/gdm3/gdm-session-worker(37)
+_SYSTEMD_CGROUP=/system.slice/gdm.service(41)
+_SYSTEMD_UNIT=gdm.service(25)
+SYSLOG_IDENTIFIER=gdm-password](31)
+_CMDLINE=gdm-session-worker [pam/gdm-password](46)
+MESSAGE=pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=yl(119)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=26f74e3e06994d31b41e0a92e0b96df2(55)
+SYSLOG_TIMESTAMP=Sep  6 16:51:01 (33)
+_PID=12107(10)
+_SOURCE_REALTIME_TIMESTAMP=1693990261206329(43)
+-----------------------
+
+
+// 用户名和密码都错误
+9月 06 16:53:22 vm gdm-password][12133]: pam_unix(gdm-password:auth): check pass; user unknown
+9月 06 16:53:22 vm gdm-password][12133]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=
+
+-----------------------
+
+9月 06 16:53:22 vm gdm-password][12133]: pam_unix(gdm-password:auth): check pass; user unknown
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_COMM=gdm-session-wor(21)
+_EXE=/usr/lib/gdm3/gdm-session-worker(37)
+_SYSTEMD_CGROUP=/system.slice/gdm.service(41)
+_SYSTEMD_UNIT=gdm.service(25)
+SYSLOG_IDENTIFIER=gdm-password](31)
+_CMDLINE=gdm-session-worker [pam/gdm-password](46)
+MESSAGE=pam_unix(gdm-password:auth): check pass; user unknown(61)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=26f74e3e06994d31b41e0a92e0b96df2(55)
+_PID=12133(10)
+SYSLOG_TIMESTAMP=Sep  6 16:53:22 (33)
+_SOURCE_REALTIME_TIMESTAMP=1693990402589892(43)
+-----------------------
+
+9月 06 16:53:22 vm gdm-password][12133]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_COMM=gdm-session-wor(21)
+_EXE=/usr/lib/gdm3/gdm-session-worker(37)
+_SYSTEMD_CGROUP=/system.slice/gdm.service(41)
+_SYSTEMD_UNIT=gdm.service(25)
+SYSLOG_IDENTIFIER=gdm-password](31)
+_CMDLINE=gdm-session-worker [pam/gdm-password](46)
+MESSAGE=pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=(110)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=26f74e3e06994d31b41e0a92e0b96df2(55)
+_PID=12133(10)
+SYSLOG_TIMESTAMP=Sep  6 16:53:22 (33)
+SYSLOG_RAW=<85>Sep  6 16:53:22 gdm-password]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost= (149)
+_SOURCE_REALTIME_TIMESTAMP=1693990402592610(43)
+-----------------------
+
+
+// 琐屏
+无
+
+
+// 解锁
+9月 06 16:58:18 vm gdm-password][12774]: gkr-pam: unlocked login keyring
+
+-----------------------
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_COMM=gdm-session-wor(21)
+_EXE=/usr/lib/gdm3/gdm-session-worker(37)
+_GID=1000(9)
+_AUDIT_SESSION=1(16)
+_AUDIT_LOGINUID=1000(20)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=-.slice(27)
+SYSLOG_IDENTIFIER=gdm-password](31)
+MESSAGE=gkr-pam: unlocked login keyring(39)
+_CMDLINE=gdm-session-worker [pam/gdm-password](46)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/session-1.scope(59)
+_SYSTEMD_SESSION=1(18)
+_SYSTEMD_UNIT=session-1.scope(29)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+SYSLOG_TIMESTAMP=Sep  6 16:00:23 (33)
+_PID=8738(9)
+_SYSTEMD_INVOCATION_ID=9b144ec1c3f64b5d80f3cbf1a47fa104(55)
+_SOURCE_REALTIME_TIMESTAMP=1693987223994479(43)
+-----------------------

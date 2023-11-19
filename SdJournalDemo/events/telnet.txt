@@ -1,0 +1,61 @@
+// 运行telnet ServerIP命令
+[TELNET] Log: MESSAGE=connect from 192.168.56.1 (192.168.56.1)
+[TELNET] Hit: MESSAGE=connect from ((\d{1,3}\.){3}\d{1,3}) \((\d{1,3}\.){3}\d{1,3}\)
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip
+4855: 0, 192.168.56.1
+----------TELNET CACHE END----------
+
+// 登陆成功
+[TELNET] Log: MESSAGE=pam_unix(login:session): session opened for user user1 by (uid=0)
+[TELNET] Hit: MESSAGE=pam_unix\(login:session\): session opened for user (\w+) by \(uid=\d\)
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip
+4855: 4856, 192.168.56.1
+----------TELNET CACHE END----------
+type=1, time=1694659500023902, bLoginSuccess=1, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=1, userId=1001, clientPort=, subjectUserId=1001
+
+// 退出
+[TELNET] Log: MESSAGE=pam_unix(login:session): session closed for user user1
+[TELNET] Hit: MESSAGE=pam_unix\(login:session\): session closed for user (\w+)
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip
+----------TELNET CACHE END----------
+type=2, time=1694659505390492, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=3, userId=1001, clientPort=, subjectUserId=1001
+
+// 运行telnet ServerIP命令
+[TELNET] Log: MESSAGE=connect from 192.168.56.1 (192.168.56.1)
+[TELNET] Hit: MESSAGE=connect from ((\d{1,3}\.){3}\d{1,3}) \((\d{1,3}\.){3}\d{1,3}\)
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip
+5045: 0, 192.168.56.1
+----------TELNET CACHE END----------
+
+// 用户名正确，密码错误
+[TELNET] Log: MESSAGE=FAILED LOGIN (1) on '/dev/pts/1' from 'yl-note' FOR 'user2', Authentication failure
+[TELNET] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/pts/\d' from '.*' FOR '(\w+)', Authentication failure
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip
+----------TELNET CACHE END----------
+type=1, time=1694659524963690, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user2, loginDomain=, status=2, userId=1002, clientPort=, subjectUserId=1002
+
+// 运行telnet ServerIP命令
+[TELNET] Log: MESSAGE=connect from 192.168.56.1 (192.168.56.1)
+[TELNET] Hit: MESSAGE=connect from ((\d{1,3}\.){3}\d{1,3}) \((\d{1,3}\.){3}\d{1,3}\)
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip
+5055: 0, 192.168.56.1
+----------TELNET CACHE END----------
+
+// 用户名错误--1
+[TELNET] Log: MESSAGE=pam_unix(login:auth): check pass; user unknown
+[TELNET] Hit: MESSAGE=pam_unix(login:auth): check pass; user unknown
+type=1, time=1694659634508798, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+// 密码错误--2
+[TELNET] Log: MESSAGE=FAILED LOGIN (1) on '/dev/pts/1' from 'yl-note' FOR 'UNKNOWN', Authentication failure
+[TELNET] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/pts/\d' from '.*' FOR '(\w+)', Authentication failure
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip
+----------TELNET CACHE END----------
+type=1, time=1694659637198260, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=UNKNOWN, loginDomain=, status=2, userId=, clientPort=, subjectUserId=

@@ -1,0 +1,457 @@
+// 登陆成功
+9月 06 11:00:28 vm in.telnetd[5433]: connect from 192.168.56.1 (192.168.56.1)
+9月 06 11:00:41 vm login[5434]: pam_unix(login:session): session opened for user yl by (uid=0)
+9月 06 11:00:41 vm systemd[1]: Started Session 10 of user yl.
+9月 06 11:00:41 vm systemd-logind[635]: New session 10 of user yl.
+
+-----------------------
+
+9月 06 11:00:28 vm in.telnetd[5433]: connect from 192.168.56.1 (192.168.56.1)
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+SYSLOG_FACILITY=3(17)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=syslog(17)
+_CAP_EFFECTIVE=0(16)
+SYSLOG_IDENTIFIER=in.telnetd(28)
+_UID=128(8)
+_GID=136(8)
+_EXE=/usr/sbin/in.telnetd(25)
+MESSAGE=connect from 192.168.56.1 (192.168.56.1)(48)
+_COMM=in.telnetd(16)
+_CMDLINE=in.telnetd(19)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_CGROUP=/system.slice/inetd.service(43)
+_SYSTEMD_UNIT=inetd.service(27)
+_SYSTEMD_INVOCATION_ID=961291f537b04c199efda0bf5d5a48db(55)
+SYSLOG_PID=5433(15)
+SYSLOG_TIMESTAMP=Sep  6 11:00:28 (33)
+_PID=5433(9)
+_SOURCE_REALTIME_TIMESTAMP=1693969228718858(43)
+-----------------------
+
+9月 06 11:00:41 vm login[5434]: pam_unix(login:session): session opened for user yl by (uid=0)
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+*_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=10(17)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_GID=136(8)
+*MESSAGE=pam_unix(login:session): session opened for user yl by (uid=0)(70)
+*_CMDLINE=login -h _gateway -p(29)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_CGROUP=/system.slice/inetd.service(43)
+_SYSTEMD_UNIT=inetd.service(27)
+_SYSTEMD_INVOCATION_ID=961291f537b04c199efda0bf5d5a48db(55)
+SYSLOG_PID=5434(15)
+SYSLOG_TIMESTAMP=Sep  6 11:00:41 (33)
+*_PID=5434(9)
+_SOURCE_REALTIME_TIMESTAMP=1693969241259176(43)
+-----------------------
+
+9月 06 11:00:41 vm systemd[1]: Started Session 10 of user yl.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+SYSLOG_FACILITY=3(17)
+SYSLOG_IDENTIFIER=systemd(25)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_TRANSPORT=journal(18)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_PID=1(6)
+_COMM=systemd(13)
+_EXE=/usr/lib/systemd/systemd(29)
+_CMDLINE=/sbin/init(19)
+_SYSTEMD_CGROUP=/init.scope(27)
+_SYSTEMD_UNIT=init.scope(24)
+_SYSTEMD_SLICE=-.slice(22)
+CODE_FILE=src/core/job.c(24)
+CODE_LINE=929(13)
+CODE_FUNC=job_log_done_status_message(37)
+JOB_TYPE=start(14)
+JOB_RESULT=done(15)
+MESSAGE_ID=39f53479d3a045ac8e11786248231fbf(43)
+MESSAGE=Started Session 10 of user yl.(38)
+UNIT=session-10.scope(21)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+JOB_ID=6221(11)
+INVOCATION_ID=d6df224ecbbb4989bb3289fccf4e451a(46)
+_SOURCE_REALTIME_TIMESTAMP=1693969241263927(43)
+-----------------------
+
+9月 06 11:00:41 vm systemd-logind[635]: New session 10 of user yl.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=journal(18)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=systemd-logind(32)
+_COMM=systemd-logind(20)
+_EXE=/usr/lib/systemd/systemd-logind(36)
+_CMDLINE=/lib/systemd/systemd-logind(36)
+_CAP_EFFECTIVE=24420020f(24)
+_SYSTEMD_CGROUP=/system.slice/systemd-logind.service(52)
+_SYSTEMD_UNIT=systemd-logind.service(36)
+CODE_FILE=src/login/logind-session.c(36)
+CODE_LINE=698(13)
+CODE_FUNC=session_start(23)
+MESSAGE_ID=8d45620c1a4348dbb17410da57c60c66(43)
+USER_ID=yl(10)
+_PID=635(8)
+SESSION_ID=10(13)
+MESSAGE=New session 10 of user yl.(34)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=625f7cbfebca48f287836c8c01a0e21d(55)
+LEADER=5434(11)
+_SOURCE_REALTIME_TIMESTAMP=1693969241264548(43)
+-----------------------
+
+
+// 退出
+9月 06 11:00:53 vm login[5434]: pam_unix(login:session): session closed for user yl
+9月 06 11:00:53 vm systemd[1]: session-10.scope: Succeeded.
+9月 06 11:00:53 vm systemd-logind[635]: Session 10 logged out. Waiting for processes to exit.
+9月 06 11:00:53 vm systemd-logind[635]: Removed session 10.
+
+-----------------------
+
+9月 06 11:00:53 vm login[5434]: pam_unix(login:session): session closed for user yl
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_GID=1000(9)
+_AUDIT_LOGINUID=1000(20)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=-.slice(27)
+_AUDIT_SESSION=10(17)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/session-10.scope(60)
+_SYSTEMD_SESSION=10(19)
+_SYSTEMD_UNIT=session-10.scope(30)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+MESSAGE=pam_unix(login:session): session closed for user yl(59)
+*_CMDLINE=login -h _gateway -p(29)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+SYSLOG_PID=5434(15)
+_PID=5434(9)
+SYSLOG_TIMESTAMP=Sep  6 11:00:53 (33)
+_SYSTEMD_INVOCATION_ID=d6df224ecbbb4989bb3289fccf4e451a(55)
+_SOURCE_REALTIME_TIMESTAMP=1693969253873395(43)
+-----------------------
+
+9月 06 11:00:53 vm systemd[1]: session-10.scope: Succeeded.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+SYSLOG_FACILITY=3(17)
+SYSLOG_IDENTIFIER=systemd(25)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_TRANSPORT=journal(18)
+_CAP_EFFECTIVE=1ffffffffff(26)
+CODE_FILE=src/core/unit.c(25)
+CODE_LINE=5870(14)
+CODE_FUNC=unit_log_success(26)
+MESSAGE_ID=7ad2d189f7e94e70a38c781354912448(43)
+_PID=1(6)
+_COMM=systemd(13)
+_EXE=/usr/lib/systemd/systemd(29)
+_CMDLINE=/sbin/init(19)
+_SYSTEMD_CGROUP=/init.scope(27)
+_SYSTEMD_UNIT=init.scope(24)
+_SYSTEMD_SLICE=-.slice(22)
+UNIT=session-10.scope(21)
+MESSAGE=session-10.scope: Succeeded.(36)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+INVOCATION_ID=d6df224ecbbb4989bb3289fccf4e451a(46)
+_SOURCE_REALTIME_TIMESTAMP=1693969253877387(43)
+-----------------------
+
+9月 06 11:00:53 vm systemd-logind[635]: Session 10 logged out. Waiting for processes to exit.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=journal(18)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=systemd-logind(32)
+_COMM=systemd-logind(20)
+_EXE=/usr/lib/systemd/systemd-logind(36)
+_CMDLINE=/lib/systemd/systemd-logind(36)
+_CAP_EFFECTIVE=24420020f(24)
+_SYSTEMD_CGROUP=/system.slice/systemd-logind.service(52)
+_SYSTEMD_UNIT=systemd-logind.service(36)
+CODE_FILE=src/login/logind-session.c(36)
+USER_ID=yl(10)
+CODE_LINE=770(13)
+CODE_FUNC=session_stop_scope(28)
+_PID=635(8)
+SESSION_ID=10(13)
+MESSAGE=Session 10 logged out. Waiting for processes to exit.(61)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=625f7cbfebca48f287836c8c01a0e21d(55)
+LEADER=5434(11)
+_SOURCE_REALTIME_TIMESTAMP=1693969253878377(43)
+-----------------------
+
+9月 06 11:00:53 vm systemd-logind[635]: Removed session 10.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=journal(18)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=systemd-logind(32)
+_COMM=systemd-logind(20)
+_EXE=/usr/lib/systemd/systemd-logind(36)
+_CMDLINE=/lib/systemd/systemd-logind(36)
+_CAP_EFFECTIVE=24420020f(24)
+_SYSTEMD_CGROUP=/system.slice/systemd-logind.service(52)
+_SYSTEMD_UNIT=systemd-logind.service(36)
+CODE_FILE=src/login/logind-session.c(36)
+USER_ID=yl(10)
+CODE_LINE=827(13)
+CODE_FUNC=session_finalize(26)
+MESSAGE_ID=3354939424b4456d9802ca8333ed424a(43)
+_PID=635(8)
+SESSION_ID=10(13)
+MESSAGE=Removed session 10.(27)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=625f7cbfebca48f287836c8c01a0e21d(55)
+LEADER=5434(11)
+_SOURCE_REALTIME_TIMESTAMP=1693969253882446(43)
+-----------------------
+
+
+// 用户名正确，密码错误
+9月 06 11:26:06 vm in.telnetd[5554]: connect from 192.168.56.2 (192.168.56.2)
+9月 06 11:26:19 vm login[5555]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/3 ruser= rhost=vm  user=yl
+9月 06 11:26:22 vm login[5555]: FAILED LOGIN (1) on '/dev/pts/3' from 'vm' FOR 'yl', Authentication failure
+
+-----------------------
+
+9月 06 11:26:06 vm in.telnetd[5554]: connect from 192.168.56.2 (192.168.56.2)
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+SYSLOG_FACILITY=3(17)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=syslog(17)
+_CAP_EFFECTIVE=0(16)
+SYSLOG_IDENTIFIER=in.telnetd(28)
+_UID=128(8)
+_GID=136(8)
+_EXE=/usr/sbin/in.telnetd(25)
+_COMM=in.telnetd(16)
+_CMDLINE=in.telnetd(19)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_CGROUP=/system.slice/inetd.service(43)
+_SYSTEMD_UNIT=inetd.service(27)
+_SYSTEMD_INVOCATION_ID=961291f537b04c199efda0bf5d5a48db(55)
+SYSLOG_PID=5554(15)
+SYSLOG_TIMESTAMP=Sep  6 11:26:06 (33)
+MESSAGE=connect from 192.168.56.2 (192.168.56.2)(48)
+_PID=5554(9)
+_SOURCE_REALTIME_TIMESTAMP=1693970766896106(43)
+-----------------------
+
+9月 06 11:26:19 vm login[5555]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/3 ruser= rhost=vm  user=yl
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_GID=136(8)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_CGROUP=/system.slice/inetd.service(43)
+_SYSTEMD_UNIT=inetd.service(27)
+_SYSTEMD_INVOCATION_ID=961291f537b04c199efda0bf5d5a48db(55)
+SYSLOG_PID=5555(15)
+SYSLOG_TIMESTAMP=Sep  6 11:26:19 (33)
+MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/3 ruser= rhost=vm  user=yl(115)
+_PID=5555(9)
+_CMDLINE=login -h vm -p(23)
+_SOURCE_REALTIME_TIMESTAMP=1693970779705453(43)
+-----------------------
+
+9月 06 11:26:22 vm login[5555]: FAILED LOGIN (1) on '/dev/pts/3' from 'vm' FOR 'yl', Authentication failure
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_GID=136(8)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_CGROUP=/system.slice/inetd.service(43)
+_SYSTEMD_UNIT=inetd.service(27)
+_SYSTEMD_INVOCATION_ID=961291f537b04c199efda0bf5d5a48db(55)
+SYSLOG_PID=5555(15)
+_PID=5555(9)
+_CMDLINE=login -h vm -p(23)
+SYSLOG_TIMESTAMP=Sep  6 11:26:22 (33)
+MESSAGE=FAILED LOGIN (1) on '/dev/pts/3' from 'vm' FOR 'yl', Authentication failure(83)
+_SOURCE_REALTIME_TIMESTAMP=1693970782700660(43)
+-----------------------
+
+
+// 用户名和密码都错误
+9月 06 11:26:34 vm login[5555]: pam_unix(login:auth): check pass; user unknown
+9月 06 11:26:34 vm login[5555]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/3 ruser= rhost=vm
+9月 06 11:26:36 vm login[5555]: FAILED LOGIN (2) on '/dev/pts/3' from 'vm' FOR 'UNKNOWN', Authentication failure
+
+-----------------------
+
+9月 06 11:26:34 vm login[5555]: pam_unix(login:auth): check pass; user unknown
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+MESSAGE=pam_unix(login:auth): check pass; user unknown(54)
+_GID=136(8)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_CGROUP=/system.slice/inetd.service(43)
+_SYSTEMD_UNIT=inetd.service(27)
+_SYSTEMD_INVOCATION_ID=961291f537b04c199efda0bf5d5a48db(55)
+SYSLOG_PID=5555(15)
+_PID=5555(9)
+*_CMDLINE=login -h vm -p(23)
+SYSLOG_TIMESTAMP=Sep  6 11:26:34 (33)
+_SOURCE_REALTIME_TIMESTAMP=1693970794748820(43)
+-----------------------
+
+9月 06 11:26:34 vm login[5555]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/3 ruser= rhost=vm
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_GID=136(8)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_CGROUP=/system.slice/inetd.service(43)
+_SYSTEMD_UNIT=inetd.service(27)
+_SYSTEMD_INVOCATION_ID=961291f537b04c199efda0bf5d5a48db(55)
+SYSLOG_PID=5555(15)
+_PID=5555(9)
+*_CMDLINE=login -h vm -p(23)
+SYSLOG_TIMESTAMP=Sep  6 11:26:34 (33)
+MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/3 ruser= rhost=vm(106)
+SYSLOG_RAW=<85>Sep  6 11:26:34 login[5555]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/3 ruser= rhost=vm (143)
+_SOURCE_REALTIME_TIMESTAMP=1693970794748996(43)
+-----------------------
+
+9月 06 11:26:36 vm login[5555]: FAILED LOGIN (2) on '/dev/pts/3' from 'vm' FOR 'UNKNOWN', Authentication failure
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_GID=136(8)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_CGROUP=/system.slice/inetd.service(43)
+_SYSTEMD_UNIT=inetd.service(27)
+_SYSTEMD_INVOCATION_ID=961291f537b04c199efda0bf5d5a48db(55)
+SYSLOG_PID=5555(15)
+_PID=5555(9)
+*_CMDLINE=login -h vm -p(23)
+SYSLOG_TIMESTAMP=Sep  6 11:26:36 (33)
+MESSAGE=FAILED LOGIN (2) on '/dev/pts/3' from 'vm' FOR 'UNKNOWN', Authentication failure(88)
+_SOURCE_REALTIME_TIMESTAMP=1693970796803647(43)
+-----------------------
+
+

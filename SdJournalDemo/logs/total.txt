@@ -1,0 +1,313 @@
+说明：
+上面是/var/log/auth.log的日志，下面是journalctl -f的日志
+
+【桌面登陆】
+// 登陆成功
+Aug 29 15:07:53 vm gdm-password]: gkr-pam: unable to locate daemon control file
+Aug 29 15:07:53 vm gdm-password]: gkr-pam: stashed password to try later in open session
+*Aug 29 15:07:53 vm gdm-password]: pam_unix(gdm-password:session): session opened for user yl by (uid=0)
+Aug 29 15:07:53 vm systemd-logind[637]: New session 36 of user yl.
+Aug 29 15:07:53 vm gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Aug 29 15:07:54 vm gnome-keyring-daemon[13356]: The Secret Service was already initialized
+Aug 29 15:07:54 vm gnome-keyring-daemon[13356]: The PKCS#11 component was already initialized
+Aug 29 15:07:55 vm polkitd(authority=local): Registered Authentication Agent for unix-session:36 (system bus name :1.679 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Aug 29 15:08:00 vm gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Aug 29 15:08:00 vm systemd-logind[637]: Session c9 logged out. Waiting for processes to exit.
+Aug 29 15:08:00 vm systemd-logind[637]: Removed session c9.
+Aug 29 15:08:00 vm polkitd(authority=local): Unregistered Authentication Agent for unix-session:c9 (system bus name :1.656, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+
+8月 29 15:07:53 vm gdm-password][13329]: gkr-pam: unable to locate daemon control file
+8月 29 15:07:53 vm gdm-password][13329]: gkr-pam: stashed password to try later in open session
+*8月 29 15:07:53 vm gdm-password][13329]: pam_unix(gdm-password:session): session opened for user yl by (uid=0)
+8月 29 15:07:53 vm systemd[1]: Started Session 36 of user yl.
+8月 29 15:07:53 vm systemd-logind[637]: New session 36 of user yl.
+8月 29 15:07:53 vm gdm-password][13329]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+8月 29 15:07:53 vm kernel: rfkill: input handler enabled
+8月 29 15:07:53 vm /usr/lib/gdm3/gdm-x-session[13362]: (--) Log file renamed from "/home/yl/.local/share/xorg/Xorg.pid-13362.log" to "/home/yl/.local/share/xorg/Xorg.0.log"
+8月 29 15:07:53 vm /usr/lib/gdm3/gdm-x-session[13362]: X.Org X Server 1.20.13
+8月 29 15:07:53 vm /usr/lib/gdm3/gdm-x-session[13362]: X Protocol Version 11, Revision 0
+...
+
+// 琐屏
+无
+
+8月 29 15:13:15 vm gnome-shell[13513]: ../clutter/clutter/clutter-actor.c:10558: The clutter_actor_set_allocation() function can only be called from within the implementation of the ClutterActor::allocate() virtual function.
+8月 29 15:13:17 vm gnome-shell[13513]: cr_parser_new_from_buf: assertion 'a_buf && a_len' failed
+8月 29 15:13:17 vm gnome-shell[13513]: cr_declaration_parse_list_from_buf: assertion 'parser' failed
+8月 29 15:13:17 vm gnome-shell[13513]: cr_parser_new_from_buf: assertion 'a_buf && a_len' failed
+8月 29 15:13:17 vm gnome-shell[13513]: cr_declaration_parse_list_from_buf: assertion 'parser' failed
+8月 29 15:13:17 vm gnome-shell[13513]: g_dbus_connection_emit_signal: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+8月 29 15:13:17 vm gnome-shell[13513]: cr_parser_new_from_buf: assertion 'a_buf && a_len' failed
+8月 29 15:13:17 vm gnome-shell[13513]: cr_declaration_parse_list_from_buf: assertion 'parser' failed
+8月 29 15:13:27 vm systemd[1]: fprintd.service: Succeeded.
+
+
+// 解锁
+*Aug 29 15:14:21 vm gdm-password]: gkr-pam: unlocked login keyring
+
+*8月 29 15:14:21 vm gdm-password][13999]: gkr-pam: unlocked login keyring
+8月 29 15:14:21 vm dbus-daemon[610]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service' requested by ':1.679' (uid=1000 pid=13513 comm="/usr/bin/gnome-shell " label="unconfined")
+8月 29 15:14:21 vm systemd[1]: Starting Fingerprint Authentication Daemon...
+8月 29 15:14:21 vm gnome-shell[13513]: cr_parser_new_from_buf: assertion 'a_buf && a_len' failed
+8月 29 15:14:21 vm gnome-shell[13513]: cr_declaration_parse_list_from_buf: assertion 'parser' failed
+8月 29 15:14:21 vm NetworkManager[613]: <info>  [1693293261.1979] agent-manager: agent[2551275d1fdd25d4,:1.679/org.gnome.Shell.NetworkAgent/1000]: agent registered
+8月 29 15:14:21 vm dbus-daemon[12997]: [session uid=1000 pid=12997] Activating service name='org.freedesktop.FileManager1' requested by ':1.25' (uid=1000 pid=13513 comm="/usr/bin/gnome-shell " label="unconfined")
+8月 29 15:14:21 vm gnome-shell[13513]: cr_parser_new_from_buf: assertion 'a_buf && a_len' failed
+8月 29 15:14:21 vm gnome-shell[13513]: cr_declaration_parse_list_from_buf: assertion 'parser' failed
+8月 29 15:14:21 vm dbus-daemon[610]: [system] Successfully activated service 'net.reactivated.Fprint'
+8月 29 15:14:21 vm systemd[1]: Started Fingerprint Authentication Daemon.
+8月 29 15:14:21 vm dbus-daemon[12997]: [session uid=1000 pid=12997] Activating service name='org.gnome.Nautilus' requested by ':1.25' (uid=1000 pid=13513 comm="/usr/bin/gnome-shell " label="unconfined")
+8月 29 15:14:21 vm gnome-shell[13513]: cr_parser_new_from_buf: assertion 'a_buf && a_len' failed
+8月 29 15:14:21 vm gnome-shell[13513]: cr_declaration_parse_list_from_buf: assertion 'parser' failed
+8月 29 15:14:21 vm dbus-daemon[12997]: [session uid=1000 pid=12997] Successfully activated service 'org.gnome.Nautilus'
+8月 29 15:14:21 vm org.gnome.Nautilus[14022]: Failed to register: Unable to acquire bus name 'org.gnome.Nautilus'
+8月 29 15:14:21 vm dbus-daemon[12997]: [session uid=1000 pid=12997] Successfully activated service 'org.freedesktop.FileManager1'
+8月 29 15:14:22 vm gnome-shell[13513]: cr_parser_new_from_buf: assertion 'a_buf && a_len' failed
+8月 29 15:14:22 vm gnome-shell[13513]: cr_declaration_parse_list_from_buf: assertion 'parser' failed
+8月 29 15:14:22 vm gnome-shell[13513]: Window manager warning: Overwriting existing binding of keysym 31 with keysym 31 (keycode a).
+8月 29 15:14:22 vm gnome-shell[13513]: Window manager warning: Overwriting existing binding of keysym 32 with keysym 32 (keycode b).
+8月 29 15:14:22 vm gnome-shell[13513]: Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
+8月 29 15:14:22 vm gnome-shell[13513]: Window manager warning: Overwriting existing binding of keysym 34 with keysym 34 (keycode d).
+8月 29 15:14:22 vm gnome-shell[13513]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+8月 29 15:14:22 vm gnome-shell[13513]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+8月 29 15:14:22 vm gnome-shell[13513]: Window manager warning: Overwriting existing binding of keysym 37 with keysym 37 (keycode 10).
+8月 29 15:14:22 vm gnome-shell[13513]: Window manager warning: Overwriting existing binding of keysym 38 with keysym 38 (keycode 11).
+8月 29 15:14:22 vm gnome-shell[13513]: Window manager warning: Overwriting existing binding of keysym 39 with keysym 39 (keycode 12).
+
+
+// 注销
+Aug 29 15:16:06 vm polkitd(authority=local): Unregistered Authentication Agent for unix-session:36 (system bus name :1.679, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+*Aug 29 15:16:07 vm gdm-password]: pam_unix(gdm-password:session): session closed for user yl
+Aug 29 15:16:07 vm systemd-logind[637]: Session 36 logged out. Waiting for processes to exit.
+Aug 29 15:16:07 vm systemd-logind[637]: Removed session 36.
+Aug 29 15:16:07 vm gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm by (uid=0)
+Aug 29 15:16:07 vm systemd-logind[637]: New session c10 of user gdm.
+Aug 29 15:16:07 vm systemd: pam_unix(systemd-user:session): session opened for user gdm by (uid=0)
+Aug 29 15:16:08 vm polkitd(authority=local): Registered Authentication Agent for unix-session:c10 (system bus name :1.723 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+
+...
+8月 29 15:16:07 vm /usr/lib/gdm3/gdm-x-session[13362]: (II) UnloadModule: "libinput"
+8月 29 15:16:07 vm /usr/lib/gdm3/gdm-x-session[13362]: (II) systemd-logind: releasing fd for 13:70
+8月 29 15:16:07 vm /usr/lib/gdm3/gdm-x-session[13362]: (II) UnloadModule: "libinput"
+8月 29 15:16:07 vm /usr/lib/gdm3/gdm-x-session[13362]: (II) systemd-logind: releasing fd for 13:67
+8月 29 15:16:07 vm /usr/lib/gdm3/gdm-x-session[13362]: (II) UnloadModule: "libinput"
+8月 29 15:16:07 vm /usr/lib/gdm3/gdm-x-session[13362]: (II) systemd-logind: releasing fd for 13:65
+8月 29 15:16:07 vm /usr/lib/gdm3/gdm-x-session[13362]: (II) UnloadModule: "libinput"
+8月 29 15:16:07 vm /usr/lib/gdm3/gdm-x-session[13362]: (II) systemd-logind: releasing fd for 13:64
+8月 29 15:16:07 vm /usr/lib/gdm3/gdm-x-session[13362]: (II) Server terminated successfully (0). Closing log file.
+*8月 29 15:16:07 vm gdm-password][13329]: pam_unix(gdm-password:session): session closed for user yl
+8月 29 15:16:07 vm systemd[1]: session-36.scope: Succeeded.
+8月 29 15:16:07 vm systemd-logind[637]: Session 36 logged out. Waiting for processes to exit.
+8月 29 15:16:07 vm systemd-logind[637]: Removed session 36.
+8月 29 15:16:07 vm gdm-launch-environment][14070]: pam_unix(gdm-launch-environment:session): session opened for user gdm by (uid=0)
+8月 29 15:16:07 vm systemd[1]: Created slice User Slice of UID 125.
+8月 29 15:16:07 vm systemd[1]: Starting User Runtime Directory /run/user/125...
+8月 29 15:16:07 vm systemd-logind[637]: New session c10 of user gdm.
+8月 29 15:16:07 vm systemd[1]: Finished User Runtime Directory /run/user/125.
+...
+
+
+// 用户名存在，密码错误
+*Aug 29 15:22:09 vm gdm-password]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=yl
+
+*8月 29 15:22:09 vm gdm-password][15362]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=yl
+8月 29 15:22:10 vm gnome-shell[15122]: JS WARNING: [resource:///org/gnome/shell/gdm/util.js 285]: reference to undefined property "_currentMessageExtraInterval"
+8月 29 15:22:11 vm geoclue[15206]: Service not used for 60 seconds. Shutting down..
+8月 29 15:22:11 vm systemd[1]: geoclue.service: Succeeded.
+
+
+// 用户名不存在，密码错误
+无
+
+8月 29 15:23:50 vm dbus-daemon[610]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service' requested by ':1.788' (uid=125 pid=15122 comm="/usr/bin/gnome-shell " label="unconfined")
+8月 29 15:23:50 vm gnome-shell[15122]: ActUserManager: user (null) has no username (uid: -1)
+8月 29 15:23:50 vm systemd[1]: Starting Fingerprint Authentication Daemon...
+*8月 29 15:23:50 vm gdm-password][15388]: accountsservice: ActUserManager: user (null) has no username (uid: -1)
+8月 29 15:23:50 vm dbus-daemon[610]: [system] Successfully activated service 'net.reactivated.Fprint'
+8月 29 15:23:50 vm systemd[1]: Started Fingerprint Authentication Daemon.
+
+
+Aug 29 15:24:42 vm gdm-password]: pam_unix(gdm-password:auth): check pass; user unknown
+*Aug 29 15:24:42 vm gdm-password]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost= 
+
+8月 29 15:24:21 vm systemd[1]: fprintd.service: Succeeded.
+8月 29 15:24:42 vm gdm-password][15388]: pam_unix(gdm-password:auth): check pass; user unknown
+*8月 29 15:24:42 vm gdm-password][15388]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=
+8月 29 15:24:46 vm dbus-daemon[610]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service' requested by ':1.788' (uid=125 pid=15122 comm="/usr/bin/gnome-shell " label="unconfined")
+8月 29 15:24:46 vm systemd[1]: Starting Fingerprint Authentication Daemon...
+8月 29 15:24:46 vm gdm-password][15402]: accountsservice: ActUserManager: user (null) has no username (uid: -1)
+8月 29 15:24:46 vm dbus-daemon[610]: [system] Successfully activated service 'net.reactivated.Fprint'
+8月 29 15:24:46 vm systemd[1]: Started Fingerprint Authentication Daemon.
+8月 29 15:25:17 vm systemd[1]: fprintd.service: Succeeded.
+
+
+
+// 注销后，登陆失败1次，然后登陆成功
+*Aug 29 15:32:38 vm gdm-password]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=yl
+
+*8月 29 15:32:38 vm gdm-password][15440]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=yl
+8月 29 15:32:42 vm systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+8月 29 15:32:44 vm systemd[1]: fprintd.service: Succeeded.
+8月 29 15:32:48 vm dbus-daemon[610]: [system] Activating via systemd: service name='net.reactivated.Fprint' unit='fprintd.service' requested by ':1.788' (uid=125 pid=15122 comm="/usr/bin/gnome-shell " label="unconfined")
+8月 29 15:32:48 vm systemd[1]: Starting Fingerprint Authentication Daemon...
+8月 29 15:32:48 vm dbus-daemon[610]: [system] Successfully activated service 'net.reactivated.Fprint'
+8月 29 15:32:48 vm systemd[1]: Started Fingerprint Authentication Daemon.
+
+
+Aug 29 15:33:48 vm gdm-password]: gkr-pam: unable to locate daemon control file
+Aug 29 15:33:48 vm gdm-password]: gkr-pam: stashed password to try later in open session
+*Aug 29 15:33:48 vm gdm-password]: pam_unix(gdm-password:session): session opened for user yl by (uid=0)
+Aug 29 15:33:48 vm systemd-logind[637]: New session 42 of user yl.
+Aug 29 15:33:48 vm gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Aug 29 15:33:49 vm gnome-keyring-daemon[15470]: The Secret Service was already initialized
+Aug 29 15:33:49 vm gnome-keyring-daemon[15470]: The PKCS#11 component was already initialized
+Aug 29 15:33:50 vm polkitd(authority=local): Registered Authentication Agent for unix-session:42 (system bus name :1.825 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Aug 29 15:33:55 vm gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Aug 29 15:33:55 vm systemd-logind[637]: Session c11 logged out. Waiting for processes to exit.
+Aug 29 15:33:55 vm systemd-logind[637]: Removed session c11.
+Aug 29 15:33:55 vm polkitd(authority=local): Unregistered Authentication Agent for unix-session:c11 (system bus name :1.788, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+
+8月 29 15:33:48 vm gdm-password][15458]: gkr-pam: unable to locate daemon control file
+8月 29 15:33:48 vm gdm-password][15458]: gkr-pam: stashed password to try later in open session
+*8月 29 15:33:48 vm gdm-password][15458]: pam_unix(gdm-password:session): session opened for user yl by (uid=0)
+8月 29 15:33:48 vm systemd[1]: Started Session 42 of user yl.
+8月 29 15:33:48 vm systemd-logind[637]: New session 42 of user yl.
+8月 29 15:33:48 vm gdm-password][15458]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+8月 29 15:33:48 vm kernel: rfkill: input handler enabled
+8月 29 15:33:48 vm /usr/lib/gdm3/gdm-x-session[15477]: (--) Log file renamed from "/home/yl/.local/share/xorg/Xorg.pid-15477.log" to "/home/yl/.local/share/xorg/Xorg.0.log"
+8月 29 15:33:48 vm /usr/lib/gdm3/gdm-x-session[15477]: X.Org X Server 1.20.13
+...
+
+
+【TTY登陆】
+// 登陆成功
+*Aug 29 15:44:04 vm login[16450]: pam_unix(login:session): session opened for user yl by LOGIN(uid=0)
+Aug 29 15:44:04 vm systemd-logind[637]: New session 44 of user yl.
+
+*8月 29 15:44:04 vm login[16450]: pam_unix(login:session): session opened for user yl by LOGIN(uid=0)
+8月 29 15:44:04 vm systemd-logind[637]: New session 44 of user yl.
+8月 29 15:44:04 vm systemd[1]: Started Session 44 of user yl.
+8月 29 15:44:09 vm systemd[969]: Starting Notification regarding a new release of Ubuntu...
+8月 29 15:44:12 vm check-new-release-gtk[16515]: /usr/lib/ubuntu-release-upgrader/check-new-release-gtk:30: PyGIWarning: Gtk was imported without specifying a version first. Use gi.require_version('Gtk', '3.0') before import to ensure that the right version gets loaded.
+8月 29 15:44:12 vm check-new-release-gtk[16515]:   from gi.repository import Gtk
+8月 29 15:44:12 vm check-new-release-gtk[16515]: WARNING:root:found new dist 'jammy' but it is on the ignore list
+8月 29 15:44:12 vm systemd[969]: update-notifier-release.service: Succeeded.
+8月 29 15:44:12 vm systemd[969]: Finished Notification regarding a new release of Ubuntu.
+
+
+// 登出
+*Aug 29 15:48:36 vm login[16450]: pam_unix(login:session): session closed for user yl
+Aug 29 15:48:36 vm systemd-logind[637]: Session 44 logged out. Waiting for processes to exit.
+Aug 29 15:48:36 vm systemd-logind[637]: Removed session 44.
+
+*8月 29 15:48:36 vm login[16450]: pam_unix(login:session): session closed for user yl
+8月 29 15:48:36 vm systemd[1]: Started Getty on tty6.
+8月 29 15:48:36 vm systemd-logind[637]: Session 44 logged out. Waiting for processes to exit.
+8月 29 15:48:36 vm systemd[1]: getty@tty3.service: Succeeded.
+8月 29 15:48:36 vm systemd[1]: session-44.scope: Succeeded.
+8月 29 15:48:36 vm systemd[1]: getty@tty3.service: Scheduled restart job, restart counter is at 1.
+8月 29 15:48:36 vm systemd[1]: Stopped Getty on tty3.
+8月 29 15:48:36 vm systemd[1]: Started Getty on tty3.
+8月 29 15:48:36 vm systemd-logind[637]: Removed session 44.
+
+
+// 用户名和密码都错误
+*Aug 29 15:49:53 vm login[16538]: pam_unix(login:auth): check pass; user unknown
+Aug 29 15:49:53 vm login[16538]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty3 ruser= rhost= 
+*Aug 29 15:49:55 vm login[16538]: FAILED LOGIN (1) on '/dev/tty3' FOR 'UNKNOWN', Authentication failure
+
+*8月 29 15:49:53 vm login[16538]: pam_unix(login:auth): check pass; user unknown
+8月 29 15:49:53 vm login[16538]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty3 ruser= rhost=
+*8月 29 15:49:55 vm login[16538]: FAILED LOGIN (1) on '/dev/tty3' FOR 'UNKNOWN', Authentication failure
+
+
+// 用户名正确，密码错误
+Aug 29 15:50:52 vm login[16539]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty3 ruser= rhost=  user=yl
+*Aug 29 15:50:56 vm login[16539]: FAILED LOGIN (1) on '/dev/tty3' FOR 'yl', Authentication failure
+
+8月 29 15:50:52 vm login[16539]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty3 ruser= rhost=  user=yl
+*8月 29 15:50:56 vm login[16539]: FAILED LOGIN (1) on '/dev/tty3' FOR 'yl', Authentication failure
+
+
+【ssh登陆】
+// ssh登陆成功
+*[2023-08-21 10:22:44.982] Accepted password for yl from 192.168.56.1 port 46590 ssh2
+[2023-08-21 10:22:44.984] pam_unix(sshd:session): session opened for user yl by (uid=0)
+
+// ssh退出
+[2023-08-21 10:22:51.162] Received disconnect from 192.168.56.1 port 46590:11: disconnected by user
+*[2023-08-21 10:22:51.163] Disconnected from user yl 192.168.56.1 port 46590
+[2023-08-21 10:22:51.163] pam_unix(sshd:session): session closed for user yl
+
+// ssh登陆失败
+[2023-08-21 10:29:22.719] pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1  user=yl
+*[2023-08-21 10:29:24.805] Failed password for yl from 192.168.56.1 port 33542 ssh2
+[2023-08-21 10:29:29.277] Failed password for yl from 192.168.56.1 port 33542 ssh2
+[2023-08-21 10:29:37.291] Failed password for yl from 192.168.56.1 port 33542 ssh2
+[2023-08-21 10:29:39.374] Connection closed by authenticating user yl 192.168.56.1 port 33542 [preauth]
+[2023-08-21 10:29:39.375] PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1  user=yl
+
+// ssh登陆，前2次失败，后1次成功
+[2023-08-21 10:49:35.401] pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1  user=yl
+*[2023-08-21 10:49:37.345] Failed password for yl from 192.168.56.1 port 57102 ssh2
+[2023-08-21 10:50:00.593] Failed password for yl from 192.168.56.1 port 57102 ssh2
+*[2023-08-21 10:50:10.581] Accepted password for yl from 192.168.56.1 port 57102 ssh2
+[2023-08-21 10:50:10.583] pam_unix(sshd:session): session opened for user yl by (uid=0)
+
+// ssh登陆，用户名不存在且密码错误
+*[2023-08-21 13:16:21.767] Invalid user aaa from 192.168.56.1 port 60474
+[2023-08-21 13:16:31.290] pam_unix(sshd:auth): check pass; user unknown
+[2023-08-21 13:16:31.290] pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1
+*[2023-08-21 13:16:33.520] Failed password for invalid user aaa from 192.168.56.1 port 60474 ssh2
+[2023-08-21 13:16:39.406] pam_unix(sshd:auth): check pass; user unknown
+*[2023-08-21 13:16:41.730] Failed password for invalid user aaa from 192.168.56.1 port 60474 ssh2
+[2023-08-21 13:16:44.508] Connection closed by invalid user aaa 192.168.56.1 port 60474 [preauth]
+[2023-08-21 13:16:44.508] PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1
+
+
+【Telnet登陆】
+// Telnet登陆成功
+*Sep  5 20:47:56 vm xinetd[18717]: START: telnet pid=19563 from=::ffff:192.168.56.1
+Sep  5 20:48:05 vm login[19564]: pam_unix(login:session): session opened for user yl by (uid=0)
+Sep  5 20:48:05 vm systemd-logind[684]: New session 81 of user yl.
+
+*9月 05 20:47:56 vm xinetd[18717]: START: telnet pid=19563 from=::ffff:192.168.56.1
+9月 05 20:47:56 vm in.telnetd[19563]: connect from 192.168.56.1 (192.168.56.1)
+9月 05 20:48:05 vm login[19564]: pam_unix(login:session): session opened for user yl by (uid=0)
+9月 05 20:48:05 vm systemd[1]: Started Session 81 of user yl.
+9月 05 20:48:05 vm systemd-logind[684]: New session 81 of user yl.
+
+// Telnet退出
+*Sep  5 20:49:44 vm login[19564]: pam_unix(login:session): session closed for user yl
+Sep  5 20:49:44 vm systemd-logind[684]: Session 81 logged out. Waiting for processes to exit.
+Sep  5 20:49:44 vm systemd-logind[684]: Removed session 81.
+
+*9月 05 20:49:44 vm login[19564]: pam_unix(login:session): session closed for user yl
+9月 05 20:49:44 vm systemd[1]: session-81.scope: Succeeded.
+9月 05 20:49:44 vm systemd-logind[684]: Session 81 logged out. Waiting for processes to exit.
+9月 05 20:49:44 vm systemd-logind[684]: Removed session 81.
+
+// Telnet登陆，用户名不存在
+*Sep  5 20:51:44 vm xinetd[18717]: START: telnet pid=19637 from=::ffff:192.168.56.1
+Sep  5 20:51:50 vm login[19638]: pam_unix(login:auth): check pass; user unknown
+Sep  5 20:51:50 vm login[19638]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=_gateway 
+Sep  5 20:51:54 vm login[19638]: FAILED LOGIN (1) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+
+*9月 05 20:51:44 vm xinetd[18717]: START: telnet pid=19637 from=::ffff:192.168.56.1
+9月 05 20:51:44 vm in.telnetd[19637]: connect from 192.168.56.1 (192.168.56.1)
+9月 05 20:51:50 vm login[19638]: pam_unix(login:auth): check pass; user unknown
+9月 05 20:51:50 vm login[19638]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=_gateway
+9月 05 20:51:54 vm login[19638]: FAILED LOGIN (1) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+
+// Telnet登陆，用户名存在，密码错误
+*Sep  5 20:53:12 vm xinetd[18717]: START: telnet pid=19646 from=::ffff:192.168.56.1
+Sep  5 20:53:17 vm login[19647]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=_gateway  user=yl
+Sep  5 20:53:20 vm login[19647]: FAILED LOGIN (1) on '/dev/pts/2' from '_gateway' FOR 'yl', Authentication failure
+
+*9月 05 20:53:12 vm xinetd[18717]: START: telnet pid=19646 from=::ffff:192.168.56.1
+9月 05 20:53:12 vm in.telnetd[19646]: connect from 192.168.56.1 (192.168.56.1)
+9月 05 20:53:17 vm login[19647]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=_gateway  user=yl
+9月 05 20:53:20 vm login[19647]: FAILED LOGIN (1) on '/dev/pts/2' from '_gateway' FOR 'yl', Authentication failure
+
+
+

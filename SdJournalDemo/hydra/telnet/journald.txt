@@ -1,0 +1,168 @@
+yl@vm:~$ journalctl -f
+
+// $ hydra -L u.txt -P p.txt -c 1 -V 192.168.56.2 telnet
+9月 16 02:50:49 vm in.telnetd[3151]: connect from 192.168.56.1 (192.168.56.1)
+[TELNET] Log: MESSAGE=connect from 192.168.56.1 (192.168.56.1)
+[TELNET] Hit: MESSAGE=connect from ((\d{1,3}\.){3}\d{1,3}) \((\d{1,3}\.){3}\d{1,3}\)
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 0, 192.168.56.1, 0
+----------TELNET CACHE END----------
+
+9月 16 02:50:50 vm login[3152]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=_gateway  user=root
+9月 16 02:50:54 vm login[3152]: FAILED LOGIN (1) on '/dev/pts/2' from '_gateway' FOR 'root', Authentication failure
+[TELNET] Log: MESSAGE=FAILED LOGIN (1) on '/dev/pts/2' from '_gateway' FOR 'root', Authentication failure
+[TELNET] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/pts/\d' from '.*' FOR '(\w+)', Authentication failure
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803854374227, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=root, loginDomain=, status=2, userId=0, clientPort=, subjectUserId=0
+
+9月 16 02:50:54 vm login[3152]: pam_unix(login:auth): check pass; user unknown
+[TELNET] Log: MESSAGE=pam_unix(login:auth): check pass; user unknown
+[TELNET] Hit: MESSAGE=pam_unix(login:auth): check pass; user unknown
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803854760111, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:50:54 vm login[3152]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=_gateway
+9月 16 02:50:57 vm login[3152]: FAILED LOGIN (2) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Log: MESSAGE=FAILED LOGIN (2) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/pts/\d' from '.*' FOR '(\w+)', Authentication failure
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803857732699, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=UNKNOWN, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:50:58 vm login[3152]: pam_unix(login:auth): check pass; user unknown
+[TELNET] Log: MESSAGE=pam_unix(login:auth): check pass; user unknown
+[TELNET] Hit: MESSAGE=pam_unix(login:auth): check pass; user unknown
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803858118996, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:51:01 vm login[3152]: FAILED LOGIN (3) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Log: MESSAGE=FAILED LOGIN (3) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/pts/\d' from '.*' FOR '(\w+)', Authentication failure
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803861706562, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=UNKNOWN, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:51:02 vm login[3152]: pam_unix(login:auth): check pass; user unknown
+[TELNET] Log: MESSAGE=pam_unix(login:auth): check pass; user unknown
+[TELNET] Hit: MESSAGE=pam_unix(login:auth): check pass; user unknown
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803862093646, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:51:06 vm login[3152]: FAILED LOGIN (4) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Log: MESSAGE=FAILED LOGIN (4) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/pts/\d' from '.*' FOR '(\w+)', Authentication failure
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803866002267, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=UNKNOWN, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:51:06 vm login[3152]: pam_unix(login:auth): check pass; user unknown
+[TELNET] Log: MESSAGE=pam_unix(login:auth): check pass; user unknown
+[TELNET] Hit: MESSAGE=pam_unix(login:auth): check pass; user unknown
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803866387591, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:51:09 vm login[3152]: FAILED LOGIN (5) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Log: MESSAGE=FAILED LOGIN (5) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/pts/\d' from '.*' FOR '(\w+)', Authentication failure
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803869326252, bLoginSuccess=0, loginType=3, clientIp=, clientWorkstation=vm, loginUser=UNKNOWN, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:51:09 vm login[3152]: TOO MANY LOGIN TRIES (5) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN'
+9月 16 02:51:09 vm login[3152]: pam_mail(login:session): user unknown
+9月 16 02:51:09 vm login[3152]: pam_unix(login:session): close_session - error recovering username
+9月 16 02:51:09 vm login[3152]: PAM 3 more authentication failures; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=_gateway
+9月 16 02:51:09 vm login[3152]: PAM service(login) ignoring max retries; 4 > 3
+9月 16 02:51:10 vm in.telnetd[3153]: connect from 192.168.56.1 (192.168.56.1)
+[TELNET] Log: MESSAGE=connect from 192.168.56.1 (192.168.56.1)
+[TELNET] Hit: MESSAGE=connect from ((\d{1,3}\.){3}\d{1,3}) \((\d{1,3}\.){3}\d{1,3}\)
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3153: 0, 192.168.56.1, 0
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+
+9月 16 02:51:11 vm login[3154]: pam_unix(login:auth): check pass; user unknown
+[TELNET] Log: MESSAGE=pam_unix(login:auth): check pass; user unknown
+[TELNET] Hit: MESSAGE=pam_unix(login:auth): check pass; user unknown
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3153: 3154, 192.168.56.1, 0
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803871834200, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:51:11 vm login[3154]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=_gateway
+9月 16 02:51:13 vm login[3154]: FAILED LOGIN (1) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Log: MESSAGE=FAILED LOGIN (1) on '/dev/pts/2' from '_gateway' FOR 'UNKNOWN', Authentication failure
+[TELNET] Hit: MESSAGE=FAILED LOGIN \(\d\) on '/dev/pts/\d' from '.*' FOR '(\w+)', Authentication failure
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3153: 3154, 192.168.56.1, 1
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803873813159, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=UNKNOWN, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+9月 16 02:51:14 vm login[3154]: pam_unix(login:auth): check pass; user unknown
+
+9月 16 02:51:14 vm login[3154]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=_gateway
+[TELNET] Log: MESSAGE=pam_unix(login:auth): check pass; user unknown
+[TELNET] Hit: MESSAGE=pam_unix(login:auth): check pass; user unknown
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3153: 3154, 192.168.56.1, 1
+3151: 3152, 192.168.56.1, 1
+----------TELNET CACHE END----------
+type=1, time=1694803874236857, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+
+
+// $ hydra -l user1 -p a -c 1 -V 192.168.56.2 telnet
+9月 16 03:09:17 vm in.telnetd[3330]: connect from 192.168.56.1 (192.168.56.1)
+[TELNET] Log: MESSAGE=connect from 192.168.56.1 (192.168.56.1)
+[TELNET] Hit: MESSAGE=connect from ((\d{1,3}\.){3}\d{1,3}) \((\d{1,3}\.){3}\d{1,3}\)
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3330: 0, 192.168.56.1, 0
+----------TELNET CACHE END----------
+
+9月 16 03:09:18 vm login[3331]: pam_unix(login:session): session opened for user user1 by (uid=0)
+[TELNET] Log: MESSAGE=pam_unix(login:session): session opened for user user1 by (uid=0)
+[TELNET] Hit: MESSAGE=pam_unix\(login:session\): session opened for user (\w+) by \(uid=\d\)
+----------TELNET CACHE--------------
+in.telnetd pid: login pid, client ip, del
+3330: 3331, 192.168.56.1, 0
+----------TELNET CACHE END----------
+type=1, time=1694804958081335, bLoginSuccess=1, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=1, userId=1001, clientPort=, subjectUserId=1001
+
+
+9月 16 03:09:18 vm systemd-logind[635]: New session 26 of user user1.
+9月 16 03:09:18 vm systemd[1]: Started Session 26 of user user1.
+9月 16 03:09:18 vm systemd[1]: session-26.scope: Succeeded.
+9月 16 03:09:19 vm systemd-logind[635]: Session 26 logged out. Waiting for processes to exit.
+9月 16 03:09:19 vm systemd[3207]: pulseaudio.service: Succeeded.
+9月 16 03:09:19 vm systemd-logind[635]: Removed session 26.

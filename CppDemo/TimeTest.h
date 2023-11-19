@@ -1,0 +1,10 @@
+#ifndef TIME_TEST_H
+#define TIME_TEST_H
+
+//////////////////////////////
+
+void TimeTest00();
+
+//////////////////////////////
+
+#endif

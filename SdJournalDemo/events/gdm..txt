@@ -1,0 +1,24 @@
+// 登陆成功
+[GDM] Log: MESSAGE=pam_unix(gdm-password:session): session opened for user user1 by (uid=0)
+[GDM] Hit: MESSAGE=pam_unix\(gdm-password:session\): session opened for user (\w+) by \(uid=\d\)
+type=1, time=1694658069234503, bLoginSuccess=1, loginType=5, clientIp=, clientWorkstation=vm, loginUser=user1, loginDomain=, status=1, userId=1001, clientPort=, subjectUserId=1001
+
+// 退出
+[GDM] Log: MESSAGE=pam_unix(gdm-password:session): session closed for user user1
+[GDM] Hit: MESSAGE=pam_unix\(gdm-password:session\): session closed for user (\w+)
+type=2, time=1694658201848645, bLoginSuccess=0, loginType=5, clientIp=, clientWorkstation=vm, loginUser=user1, loginDomain=, status=3, userId=1001, clientPort=, subjectUserId=1001
+
+// 用户名正确，密码错误
+[GDM] Log: MESSAGE=pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=user2
+[GDM] Hit: MESSAGE=pam_unix\(gdm-password:auth\): authentication failure; logname= uid=\d euid=\d tty=/dev/tty\d ruser= rhost=  user=(\w+)
+type=1, time=1694658231642515, bLoginSuccess=0, loginType=5, clientIp=, clientWorkstation=vm, loginUser=user2, loginDomain=, status=2, userId=1002, clientPort=, subjectUserId=1002
+
+// 用户名错误--1
+[GDM] Log: MESSAGE=accountsservice: ActUserManager: user (null) has no username (uid: -1)
+[GDM] Hit: MESSAGE=accountsservice: ActUserManager: user (null) has no username (uid: -1)
+type=1, time=1694658266389045, bLoginSuccess=0, loginType=5, clientIp=, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=
+
+// 密码错误--2
+[GDM] Log: MESSAGE=pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=
+[GDM] Hit: MESSAGE=pam_unix\(gdm-password:auth\): authentication failure; logname= uid=\d euid=\d tty=/dev/tty\d ruser= rhost=
+type=1, time=1694658271040264, bLoginSuccess=0, loginType=5, clientIp=, clientWorkstation=vm, loginUser=, loginDomain=, status=2, userId=, clientPort=, subjectUserId=

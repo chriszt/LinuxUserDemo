@@ -1,0 +1,80 @@
+【问题描述】
+login日志到来时，它的父进程（in.telnetd）已经退出（ppid=0），导致无法从CACHE表中关联出ip地址信息
+【客户端】
+$ hydra -L u.txt -P p.txt  -V 192.168.56.2 telnet 
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-09-21 20:44:57
+[WARNING] telnet is by its nature unreliable to analyze, if possible better choose FTP, SSH, etc. if available
+[DATA] max 9 tasks per 1 server, overall 9 tasks, 9 login tries (l:3/p:3), ~1 try per task
+[DATA] attacking telnet://192.168.56.2:23/
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "a" - 1 of 9 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "333333" - 2 of 9 [child 1] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "444444" - 3 of 9 [child 2] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "a" - 4 of 9 [child 3] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "333333" - 5 of 9 [child 4] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "444444" - 6 of 9 [child 5] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "a" - 7 of 9 [child 6] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "333333" - 8 of 9 [child 7] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "444444" - 9 of 9 [child 8] (0/0)
+[23][telnet] host: 192.168.56.2   login: user1   password: a
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-09-21 20:45:01
+
+【服务端】
+// journald日志
+9月 21 20:44:58 vm in.telnetd[10893]: connect from 192.168.56.1 (192.168.56.1)
+9月 21 20:44:58 vm in.telnetd[10898]: connect from 192.168.56.1 (192.168.56.1)
+9月 21 20:44:58 vm in.telnetd[10897]: connect from 192.168.56.1 (192.168.56.1)
+9月 21 20:44:58 vm in.telnetd[10899]: connect from 192.168.56.1 (192.168.56.1)
+9月 21 20:44:58 vm in.telnetd[10900]: connect from 192.168.56.1 (192.168.56.1)
+9月 21 20:44:58 vm in.telnetd[10894]: connect from 192.168.56.1 (192.168.56.1)
+9月 21 20:44:58 vm in.telnetd[10896]: connect from 192.168.56.1 (192.168.56.1)
+9月 21 20:44:58 vm in.telnetd[10901]: connect from 192.168.56.1 (192.168.56.1)
+9月 21 20:44:58 vm in.telnetd[10895]: connect from 192.168.56.1 (192.168.56.1)
+9月 21 20:44:58 vm login[10905]: pam_unix(login:auth): check pass; user unknown
+9月 21 20:44:58 vm login[10905]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/4 ruser= rhost=yl-note
+9月 21 20:44:58 vm login[10904]: pam_unix(login:auth): check pass; user unknown
+9月 21 20:44:58 vm login[10904]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/6 ruser= rhost=yl-note
+9月 21 20:44:58 vm login[10907]: pam_unix(login:auth): check pass; user unknown
+9月 21 20:44:58 vm login[10907]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/9 ruser= rhost=yl-note
+9月 21 20:44:58 vm login[10906]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/10 ruser= rhost=yl-note  user=root
+9月 21 20:44:58 vm login[10908]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/8 ruser= rhost=yl-note  user=root
+9月 21 20:44:58 vm login[10910]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/7 ruser= rhost=yl-note  user=user1
+9月 21 20:44:58 vm login[10902]: pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=yl-note  user=user1
+9月 21 20:44:59 vm login[10903]: pam_unix(login:session): session opened for user user1 by (uid=0)
+9月 21 20:44:59 vm systemd[1]: Started Session 87 of user user1.
+9月 21 20:44:59 vm systemd-logind[754]: New session 87 of user user1.
+9月 21 20:44:59 vm systemd[1]: session-87.scope: Succeeded.
+9月 21 20:44:59 vm systemd-logind[754]: Session 87 logged out. Waiting for processes to exit.
+9月 21 20:44:59 vm systemd-logind[754]: Removed session 87.
+9月 21 20:45:01 vm login[10906]: FAILED LOGIN (1) on '/dev/pts/10' from 'yl-note' FOR 'root', Authentication failure
+
+// myapp日志
+----------REMOTE CACHE--------------
+Proto PID: Auth PID, Proto Type, RemoteSock
+10895: 0, 4, 192.168.56.1:50340
+10901: 0, 4, 192.168.56.1:50404
+10896: 0, 4, 192.168.56.1:50342
+10894: 0, 4, 192.168.56.1:50326
+10900: 0, 4, 192.168.56.1:50394
+10899: 0, 4, 192.168.56.1:50380
+10897: 0, 4, 192.168.56.1:50354
+10898: 0, 4, 192.168.56.1:50370
+10893: 0, 4, 192.168.56.1:50310
+----------REMOTE CACHE END----------
+**2**ppid=0, pid=10905, MESSAGE=pam_unix(login:auth): check pass; user unknown
+**2**ppid=0, pid=10905, MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/4 ruser= rhost=yl-note
+**2**ppid=0, pid=10904, MESSAGE=pam_unix(login:auth): check pass; user unknown
+**2**ppid=0, pid=10904, MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/6 ruser= rhost=yl-note
+**2**ppid=0, pid=10907, MESSAGE=pam_unix(login:auth): check pass; user unknown
+**2**ppid=0, pid=10907, MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/9 ruser= rhost=yl-note
+**2**ppid=10895, pid=10906, MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/10 ruser= rhost=yl-note  user=root
+**2**MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/10 ruser= rhost=yl-note  user=root
+**2**ppid=0, pid=10908, MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/8 ruser= rhost=yl-note  user=root
+**2**ppid=0, pid=10910, MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/7 ruser= rhost=yl-note  user=user1
+**2**ppid=0, pid=10902, MESSAGE=pam_unix(login:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=yl-note  user=user1
+**2**ppid=0, pid=10903, MESSAGE=pam_unix(login:session): session opened for user user1 by (uid=0)
+**2**ppid=0, pid=10906, MESSAGE=FAILED LOGIN (1) on '/dev/pts/10' from 'yl-note' FOR 'root', Authentication failure
+^C
+

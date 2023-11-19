@@ -1,0 +1,460 @@
+// 服务端安装和启动dropbear
+$ sudo apt install dropbear
+$ sudo dropbear -p 2222
+
+// 用户登陆成功
+9月 19 17:03:58 vm dropbear[13682]: Child connection from 192.168.56.1:58624
+9月 19 17:03:58 vm dropbear[13682]: Pubkey auth attempt with unknown algo for 'user1' from 192.168.56.1:58624
+*9月 19 17:03:59 vm dropbear[13682]: Password auth succeeded for 'user1' from 192.168.56.1:58624
+
+-----------------------
+
+9月 19 17:03:58 vm dropbear[13682]: Child connection from 192.168.56.1:58624
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13682(16)
+SYSLOG_TIMESTAMP=Sep 19 17:03:58 (33)
+MESSAGE=Child connection from 192.168.56.1:58624(48)
+_PID=13682(10)
+_SOURCE_REALTIME_TIMESTAMP=1695114238617400(43)
+-----------------------
+
+9月 19 17:03:58 vm dropbear[13682]: Pubkey auth attempt with unknown algo for 'user1' from 192.168.56.1:58624
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=4(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13682(16)
+SYSLOG_TIMESTAMP=Sep 19 17:03:58 (33)
+_PID=13682(10)
+MESSAGE=Pubkey auth attempt with unknown algo for 'user1' from 192.168.56.1:58624(81)
+_SOURCE_REALTIME_TIMESTAMP=1695114238679143(43)
+-----------------------
+
+9月 19 17:03:59 vm dropbear[13682]: Password auth succeeded for 'user1' from 192.168.56.1:58624
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13682(16)
+_PID=13682(10)
+SYSLOG_TIMESTAMP=Sep 19 17:03:59 (33)
+MESSAGE=Password auth succeeded for 'user1' from 192.168.56.1:58624(67)
+_SOURCE_REALTIME_TIMESTAMP=1695114239814390(43)
+-----------------------
+
+
+// 退出
+9月 19 17:04:08 vm dropbear[13682]: Exit (user1): Disconnect received
+
+-----------------------
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+MESSAGE=Exit (user1): Disconnect received(41)
+SYSLOG_PID=13682(16)
+_PID=13682(10)
+SYSLOG_TIMESTAMP=Sep 19 17:04:08 (33)
+_SOURCE_REALTIME_TIMESTAMP=1695114248609184(43)
+-----------------------
+
+
+// 用户名正确，密码错误
+9月 19 17:04:22 vm dropbear[13686]: Child connection from 192.168.56.1:52688
+9月 19 17:04:22 vm dropbear[13686]: Pubkey auth attempt with unknown algo for 'user1' from 192.168.56.1:52688
+*9月 19 17:04:25 vm dropbear[13686]: Bad password attempt for 'user1' from 192.168.56.1:52688
+9月 19 17:04:31 vm dropbear[13686]: Bad password attempt for 'user1' from 192.168.56.1:52688
+9月 19 17:04:32 vm dropbear[13686]: Bad password attempt for 'user1' from 192.168.56.1:52688
+9月 19 17:04:33 vm dropbear[13686]: Exit before auth (user 'user1', 3 fails): Exited normally
+
+-----------------------
+
+9月 19 17:04:22 vm dropbear[13686]: Child connection from 192.168.56.1:52688
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13686(16)
+SYSLOG_TIMESTAMP=Sep 19 17:04:22 (33)
+MESSAGE=Child connection from 192.168.56.1:52688(48)
+_PID=13686(10)
+_SOURCE_REALTIME_TIMESTAMP=1695114262717292(43)
+-----------------------
+
+9月 19 17:04:22 vm dropbear[13686]: Pubkey auth attempt with unknown algo for 'user1' from 192.168.56.1:52688
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=4(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13686(16)
+SYSLOG_TIMESTAMP=Sep 19 17:04:22 (33)
+_PID=13686(10)
+MESSAGE=Pubkey auth attempt with unknown algo for 'user1' from 192.168.56.1:52688(81)
+_SOURCE_REALTIME_TIMESTAMP=1695114262790448(43)
+-----------------------
+
+9月 19 17:04:25 vm dropbear[13686]: Bad password attempt for 'user1' from 192.168.56.1:52688
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=4(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13686(16)
+_PID=13686(10)
+SYSLOG_TIMESTAMP=Sep 19 17:04:25 (33)
+MESSAGE=Bad password attempt for 'user1' from 192.168.56.1:52688(64)
+_SOURCE_REALTIME_TIMESTAMP=1695114265268066(43)
+-----------------------
+
+9月 19 17:04:31 vm dropbear[13686]: Bad password attempt for 'user1' from 192.168.56.1:52688
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=4(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13686(16)
+_PID=13686(10)
+MESSAGE=Bad password attempt for 'user1' from 192.168.56.1:52688(64)
+SYSLOG_TIMESTAMP=Sep 19 17:04:31 (33)
+_SOURCE_REALTIME_TIMESTAMP=1695114271117404(43)
+-----------------------
+
+9月 19 17:04:32 vm dropbear[13686]: Bad password attempt for 'user1' from 192.168.56.1:52688
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=4(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13686(16)
+_PID=13686(10)
+MESSAGE=Bad password attempt for 'user1' from 192.168.56.1:52688(64)
+SYSLOG_TIMESTAMP=Sep 19 17:04:32 (33)
+_SOURCE_REALTIME_TIMESTAMP=1695114272929108(43)
+-----------------------
+
+9月 19 17:04:33 vm dropbear[13686]: Exit before auth (user 'user1', 3 fails): Exited normally
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13686(16)
+_PID=13686(10)
+SYSLOG_TIMESTAMP=Sep 19 17:04:33 (33)
+MESSAGE=Exit before auth (user 'user1', 3 fails): Exited normally(65)
+_SOURCE_REALTIME_TIMESTAMP=1695114273237973(43)
+-----------------------
+
+
+// 用户名和密码都错误
+9月 19 17:04:45 vm dropbear[13687]: Child connection from 192.168.56.1:57164
+*9月 19 17:04:45 vm dropbear[13687]: Login attempt for nonexistent user from 192.168.56.1:57164
+9月 19 17:04:52 vm dropbear[13687]: Exit before auth: Exited normally
+
+-----------------------
+
+9月 19 17:04:45 vm dropbear[13687]: Child connection from 192.168.56.1:57164
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13687(16)
+SYSLOG_TIMESTAMP=Sep 19 17:04:45 (33)
+MESSAGE=Child connection from 192.168.56.1:57164(48)
+_PID=13687(10)
+_SOURCE_REALTIME_TIMESTAMP=1695114285055085(43)
+-----------------------
+
+9月 19 17:04:45 vm dropbear[13687]: Login attempt for nonexistent user from 192.168.56.1:57164
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=4(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+_EXE=/usr/sbin/dropbear(23)
+_CMDLINE=dropbear -p 2222(25)
+SYSLOG_PID=13687(16)
+SYSLOG_TIMESTAMP=Sep 19 17:04:45 (33)
+_PID=13687(10)
+MESSAGE=Login attempt for nonexistent user from 192.168.56.1:57164(66)
+_SOURCE_REALTIME_TIMESTAMP=1695114285112176(43)
+-----------------------
+
+9月 19 17:04:52 vm dropbear[13687]: Exit before auth: Exited normally
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+_BOOT_ID=8bf21f7bea264b5f975ba81ed4c5313a(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-4a479f2e-e7bc-4b44-bd1e-ec58fe015da5.scope(71)
+_SYSTEMD_INVOCATION_ID=655da73e5c77438aaa2b14af83bff80a(55)
+SYSLOG_IDENTIFIER=dropbear(26)
+_COMM=dropbear(14)
+SYSLOG_PID=13687(16)
+_PID=13687(10)
+SYSLOG_TIMESTAMP=Sep 19 17:04:52 (33)
+MESSAGE=Exit before auth: Exited normally(41)
+_SOURCE_REALTIME_TIMESTAMP=1695114292404609(43)
+-----------------------
+

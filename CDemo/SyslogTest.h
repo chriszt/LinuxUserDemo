@@ -1,0 +1,10 @@
+#ifndef SYSLOG_TEST_H
+#define SYSLOG_TEST_H
+
+//////////////////////////////
+
+void SyslogTest00();
+
+//////////////////////////////
+
+#endif

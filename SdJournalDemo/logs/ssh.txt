@@ -1,0 +1,561 @@
+// 登陆成功
+9月 06 15:42:59 vm sshd[8276]: Accepted password for yl from 192.168.56.1 port 40766 ssh2
+9月 06 15:42:59 vm sshd[8276]: pam_unix(sshd:session): session opened for user yl by (uid=0)
+9月 06 15:42:59 vm systemd-logind[635]: New session 30 of user yl.
+9月 06 15:42:59 vm systemd[1]: Started Session 30 of user yl.
+
+-----------------------
+
+9月 06 15:42:59 vm sshd[8276]: Accepted password for yl from 192.168.56.1 port 40766 ssh2
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+_CMDLINE=sshd: yl [priv](24)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8276(15)
+SYSLOG_TIMESTAMP=Sep  6 15:42:59 (33)
+MESSAGE=Accepted password for yl from 192.168.56.1 port 40766 ssh2(66)
+_PID=8276(9)
+_SOURCE_REALTIME_TIMESTAMP=1693986179437138(43)
+-----------------------
+
+9月 06 15:42:59 vm sshd[8276]: pam_unix(sshd:session): session opened for user yl by (uid=0)
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+SYSLOG_FACILITY=10(18)
+_CMDLINE=sshd: yl [priv](24)
+MESSAGE=pam_unix(sshd:session): session opened for user yl by (uid=0)(69)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8276(15)
+SYSLOG_TIMESTAMP=Sep  6 15:42:59 (33)
+_PID=8276(9)
+_SOURCE_REALTIME_TIMESTAMP=1693986179442358(43)
+-----------------------
+
+9月 06 15:42:59 vm systemd-logind[635]: New session 30 of user yl.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=journal(18)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=systemd-logind(32)
+_COMM=systemd-logind(20)
+_EXE=/usr/lib/systemd/systemd-logind(36)
+_CMDLINE=/lib/systemd/systemd-logind(36)
+_CAP_EFFECTIVE=24420020f(24)
+_SYSTEMD_CGROUP=/system.slice/systemd-logind.service(52)
+_SYSTEMD_UNIT=systemd-logind.service(36)
+CODE_FILE=src/login/logind-session.c(36)
+CODE_LINE=698(13)
+CODE_FUNC=session_start(23)
+MESSAGE_ID=8d45620c1a4348dbb17410da57c60c66(43)
+USER_ID=yl(10)
+_PID=635(8)
+SESSION_ID=30(13)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=625f7cbfebca48f287836c8c01a0e21d(55)
+LEADER=8276(11)
+MESSAGE=New session 30 of user yl.(34)
+_SOURCE_REALTIME_TIMESTAMP=1693986179454471(43)
+-----------------------
+
+9月 06 15:42:59 vm systemd[1]: Started Session 30 of user yl.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+SYSLOG_FACILITY=3(17)
+SYSLOG_IDENTIFIER=systemd(25)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_TRANSPORT=journal(18)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_PID=1(6)
+_COMM=systemd(13)
+_EXE=/usr/lib/systemd/systemd(29)
+_CMDLINE=/sbin/init(19)
+_SYSTEMD_CGROUP=/init.scope(27)
+_SYSTEMD_UNIT=init.scope(24)
+_SYSTEMD_SLICE=-.slice(22)
+CODE_FILE=src/core/job.c(24)
+CODE_LINE=929(13)
+CODE_FUNC=job_log_done_status_message(37)
+JOB_TYPE=start(14)
+JOB_RESULT=done(15)
+MESSAGE_ID=39f53479d3a045ac8e11786248231fbf(43)
+UNIT=session-30.scope(21)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+MESSAGE=Started Session 30 of user yl.(38)
+JOB_ID=14238(12)
+INVOCATION_ID=3948e65f5c27426db273e4e7c731e9ef(46)
+_SOURCE_REALTIME_TIMESTAMP=1693986179456114(43)
+-----------------------
+
+
+
+// 退出
+9月 06 15:43:08 vm sshd[8328]: Received disconnect from 192.168.56.1 port 40766:11: disconnected by user
+9月 06 15:43:08 vm sshd[8328]: Disconnected from user yl 192.168.56.1 port 40766
+9月 06 15:43:08 vm sshd[8276]: pam_unix(sshd:session): session closed for user yl
+9月 06 15:43:08 vm systemd[1]: session-30.scope: Succeeded.
+9月 06 15:43:08 vm systemd-logind[635]: Session 30 logged out. Waiting for processes to exit.
+9月 06 15:43:08 vm systemd-logind[635]: Removed session 30.
+
+-----------------------
+
+9月 06 15:43:08 vm sshd[8328]: Received disconnect from 192.168.56.1 port 40766:11: disconnected by user
+
+PRIORITY=6(10)
+_UID=1000(9)
+_GID=1000(9)
+_CAP_EFFECTIVE=0(16)
+_SELINUX_CONTEXT=unconfined
+(28)
+_AUDIT_LOGINUID=1000(20)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=-.slice(27)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+SYSLOG_PID=8328(15)
+SYSLOG_TIMESTAMP=Sep  6 15:43:08 (33)
+MESSAGE=Received disconnect from 192.168.56.1 port 40766:11: disconnected by user(81)
+_PID=8328(9)
+_AUDIT_SESSION=30(17)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/session-30.scope(60)
+_SYSTEMD_SESSION=30(19)
+_SYSTEMD_UNIT=session-30.scope(30)
+_SYSTEMD_INVOCATION_ID=3948e65f5c27426db273e4e7c731e9ef(55)
+_SOURCE_REALTIME_TIMESTAMP=1693986188944721(43)
+-----------------------
+
+9月 06 15:43:08 vm sshd[8328]: Disconnected from user yl 192.168.56.1 port 40766
+
+PRIORITY=6(10)
+_UID=1000(9)
+_GID=1000(9)
+_CAP_EFFECTIVE=0(16)
+_SELINUX_CONTEXT=unconfined
+(28)
+_AUDIT_LOGINUID=1000(20)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=-.slice(27)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+SYSLOG_PID=8328(15)
+SYSLOG_TIMESTAMP=Sep  6 15:43:08 (33)
+_PID=8328(9)
+_AUDIT_SESSION=30(17)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/session-30.scope(60)
+_SYSTEMD_SESSION=30(19)
+_SYSTEMD_UNIT=session-30.scope(30)
+_SYSTEMD_INVOCATION_ID=3948e65f5c27426db273e4e7c731e9ef(55)
+MESSAGE=Disconnected from user yl 192.168.56.1 port 40766(57)
+_SOURCE_REALTIME_TIMESTAMP=1693986188944869(43)
+-----------------------
+
+9月 06 15:43:08 vm sshd[8276]: pam_unix(sshd:session): session closed for user yl
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_TRANSPORT=syslog(17)
+SYSLOG_IDENTIFIER=sshd(22)
+SYSLOG_FACILITY=10(18)
+MESSAGE=pam_unix(sshd:session): session closed for user yl(58)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+SYSLOG_PID=8276(15)
+_PID=8276(9)
+SYSLOG_TIMESTAMP=Sep  6 15:43:08 (33)
+_SOURCE_REALTIME_TIMESTAMP=1693986188946940(43)
+-----------------------
+
+9月 06 15:43:08 vm systemd[1]: session-30.scope: Succeeded.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+SYSLOG_FACILITY=3(17)
+SYSLOG_IDENTIFIER=systemd(25)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_TRANSPORT=journal(18)
+_CAP_EFFECTIVE=1ffffffffff(26)
+CODE_FILE=src/core/unit.c(25)
+CODE_LINE=5870(14)
+CODE_FUNC=unit_log_success(26)
+MESSAGE_ID=7ad2d189f7e94e70a38c781354912448(43)
+_PID=1(6)
+_COMM=systemd(13)
+_EXE=/usr/lib/systemd/systemd(29)
+_CMDLINE=/sbin/init(19)
+_SYSTEMD_CGROUP=/init.scope(27)
+_SYSTEMD_UNIT=init.scope(24)
+_SYSTEMD_SLICE=-.slice(22)
+UNIT=session-30.scope(21)
+MESSAGE=session-30.scope: Succeeded.(36)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+INVOCATION_ID=3948e65f5c27426db273e4e7c731e9ef(46)
+_SOURCE_REALTIME_TIMESTAMP=1693986188952027(43)
+-----------------------
+
+9月 06 15:43:08 vm systemd-logind[635]: Session 30 logged out. Waiting for processes to exit.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=journal(18)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=systemd-logind(32)
+_COMM=systemd-logind(20)
+_EXE=/usr/lib/systemd/systemd-logind(36)
+_CMDLINE=/lib/systemd/systemd-logind(36)
+_CAP_EFFECTIVE=24420020f(24)
+_SYSTEMD_CGROUP=/system.slice/systemd-logind.service(52)
+_SYSTEMD_UNIT=systemd-logind.service(36)
+CODE_FILE=src/login/logind-session.c(36)
+USER_ID=yl(10)
+CODE_LINE=770(13)
+CODE_FUNC=session_stop_scope(28)
+_PID=635(8)
+SESSION_ID=30(13)
+MESSAGE=Session 30 logged out. Waiting for processes to exit.(61)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=625f7cbfebca48f287836c8c01a0e21d(55)
+LEADER=8276(11)
+_SOURCE_REALTIME_TIMESTAMP=1693986188953196(43)
+-----------------------
+
+9月 06 15:43:08 vm systemd-logind[635]: Removed session 30.
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_TRANSPORT=journal(18)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=systemd-logind(32)
+_COMM=systemd-logind(20)
+_EXE=/usr/lib/systemd/systemd-logind(36)
+_CMDLINE=/lib/systemd/systemd-logind(36)
+_CAP_EFFECTIVE=24420020f(24)
+_SYSTEMD_CGROUP=/system.slice/systemd-logind.service(52)
+_SYSTEMD_UNIT=systemd-logind.service(36)
+CODE_FILE=src/login/logind-session.c(36)
+USER_ID=yl(10)
+CODE_LINE=827(13)
+CODE_FUNC=session_finalize(26)
+MESSAGE_ID=3354939424b4456d9802ca8333ed424a(43)
+_PID=635(8)
+SESSION_ID=30(13)
+MESSAGE=Removed session 30.(27)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=625f7cbfebca48f287836c8c01a0e21d(55)
+LEADER=8276(11)
+_SOURCE_REALTIME_TIMESTAMP=1693986188961287(43)
+-----------------------
+
+
+// 用户名正确，密码错误
+9月 06 15:46:49 vm sshd[8351]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1  user=yl
+9月 06 15:46:51 vm sshd[8351]: Failed password for yl from 192.168.56.1 port 40274 ssh2
+9月 06 15:46:53 vm sshd[8351]: Connection closed by authenticating user yl 192.168.56.1 port 40274 [preauth]
+
+-----------------------
+
+9月 06 15:46:49 vm sshd[8351]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1  user=yl
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+SYSLOG_FACILITY=10(18)
+_CMDLINE=sshd: yl [priv](24)
+MESSAGE=pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1  user=yl(117)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8351(15)
+SYSLOG_TIMESTAMP=Sep  6 15:46:49 (33)
+_PID=8351(9)
+_SOURCE_REALTIME_TIMESTAMP=1693986409447282(43)
+-----------------------
+
+9月 06 15:46:51 vm sshd[8351]: Failed password for yl from 192.168.56.1 port 40274 ssh2
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+_CMDLINE=sshd: yl [priv](24)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8351(15)
+_PID=8351(9)
+SYSLOG_TIMESTAMP=Sep  6 15:46:51 (33)
+MESSAGE=Failed password for yl from 192.168.56.1 port 40274 ssh2(64)
+_SOURCE_REALTIME_TIMESTAMP=1693986411136426(43)
+-----------------------
+
+9月 06 15:46:53 vm sshd[8351]: Connection closed by authenticating user yl 192.168.56.1 port 40274 [preauth]
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+_CMDLINE=sshd: yl [priv](24)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8351(15)
+_PID=8351(9)
+SYSLOG_TIMESTAMP=Sep  6 15:46:53 (33)
+MESSAGE=Connection closed by authenticating user yl 192.168.56.1 port 40274 [preauth](85)
+_SOURCE_REALTIME_TIMESTAMP=1693986413462974(43)
+-----------------------
+
+
+// 用户名和密码都错误
+9月 06 15:47:06 vm sshd[8355]: Invalid user wer from 192.168.56.1 port 51562
+9月 06 15:47:08 vm sshd[8355]: pam_unix(sshd:auth): check pass; user unknown
+9月 06 15:47:08 vm sshd[8355]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1
+9月 06 15:47:10 vm sshd[8355]: Failed password for invalid user wer from 192.168.56.1 port 51562 ssh2
+9月 06 15:47:12 vm sshd[8355]: Connection closed by invalid user wer 192.168.56.1 port 51562 [preauth]
+
+-----------------------
+
+9月 06 15:47:06 vm sshd[8355]: Invalid user wer from 192.168.56.1 port 51562
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+_PID=8355(9)
+_CMDLINE=sshd: [accepted](25)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8355(15)
+SYSLOG_TIMESTAMP=Sep  6 15:47:06 (33)
+MESSAGE=Invalid user wer from 192.168.56.1 port 51562(53)
+_SOURCE_REALTIME_TIMESTAMP=1693986426487550(43)
+-----------------------
+
+9月 06 15:47:08 vm sshd[8355]: pam_unix(sshd:auth): check pass; user unknown
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+SYSLOG_FACILITY=10(18)
+_PID=8355(9)
+MESSAGE=pam_unix(sshd:auth): check pass; user unknown(53)
+_CMDLINE=sshd: unknown [priv](29)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8355(15)
+SYSLOG_TIMESTAMP=Sep  6 15:47:08 (33)
+_SOURCE_REALTIME_TIMESTAMP=1693986428845177(43)
+-----------------------
+
+9月 06 15:47:08 vm sshd[8355]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+SYSLOG_FACILITY=10(18)
+_PID=8355(9)
+_CMDLINE=sshd: unknown [priv](29)
+MESSAGE=pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1(108)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8355(15)
+SYSLOG_TIMESTAMP=Sep  6 15:47:08 (33)
+SYSLOG_RAW=<85>Sep  6 15:47:08 sshd[8355]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1 (144)
+_SOURCE_REALTIME_TIMESTAMP=1693986428845388(43)
+-----------------------
+
+9月 06 15:47:10 vm sshd[8355]: Failed password for invalid user wer from 192.168.56.1 port 51562 ssh2
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+_PID=8355(9)
+_CMDLINE=sshd: unknown [priv](29)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8355(15)
+SYSLOG_TIMESTAMP=Sep  6 15:47:10 (33)
+MESSAGE=Failed password for invalid user wer from 192.168.56.1 port 51562 ssh2(78)
+_SOURCE_REALTIME_TIMESTAMP=1693986430805817(43)
+-----------------------
+
+9月 06 15:47:12 vm sshd[8355]: Connection closed by invalid user wer 192.168.56.1 port 51562 [preauth]
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_SYSTEMD_SLICE=system.slice(27)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=4(17)
+SYSLOG_IDENTIFIER=sshd(22)
+_COMM=sshd(10)
+_EXE=/usr/sbin/sshd(19)
+_SYSTEMD_CGROUP=/system.slice/ssh.service(41)
+_SYSTEMD_UNIT=ssh.service(25)
+_PID=8355(9)
+_CMDLINE=sshd: unknown [priv](29)
+_BOOT_ID=c32dacecd9a34607abdbd577dbde9147(41)
+_SYSTEMD_INVOCATION_ID=a3629d2183fe4592a3f9a00f9d38428b(55)
+SYSLOG_PID=8355(15)
+SYSLOG_TIMESTAMP=Sep  6 15:47:12 (33)
+MESSAGE=Connection closed by invalid user wer 192.168.56.1 port 51562 [preauth](79)
+_SOURCE_REALTIME_TIMESTAMP=1693986432234691(43)
+-----------------------

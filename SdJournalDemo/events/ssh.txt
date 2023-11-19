@@ -1,0 +1,24 @@
+// 登陆成功
+[SSH] Log: MESSAGE=Accepted password for user1 from 192.168.56.1 port 52244 ssh2
+[SSH] Hit: MESSAGE=Accepted password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694657434035732, bLoginSuccess=1, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=1, userId=1001, clientPort=52244, subjectUserId=1001
+
+// 退出
+[SSH] Log: MESSAGE=Disconnected from user user1 192.168.56.1 port 52244
+[SSH] Hit: MESSAGE=Disconnected from user (\w+) ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=2, time=1694657447898935, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=3, userId=1001, clientPort=52244, subjectUserId=1001
+
+// 用户名正确，密码错误
+[SSH] Log: MESSAGE=Failed password for user1 from 192.168.56.1 port 55060 ssh2
+[SSH] Hit: MESSAGE=Failed password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694657465433525, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=2, userId=1001, clientPort=55060, subjectUserId=1001
+
+// 用户名错误--1
+[SSH] Log: MESSAGE=Invalid user aaa from 192.168.56.1 port 49798
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694657529369070, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaa, loginDomain=, status=2, userId=, clientPort=49798, subjectUserId=
+
+// 密码错误--2
+[SSH] Log: MESSAGE=Failed password for invalid user aaa from 192.168.56.1 port 49798 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694657540463955, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaa, loginDomain=, status=2, userId=, clientPort=49798, subjectUserId=

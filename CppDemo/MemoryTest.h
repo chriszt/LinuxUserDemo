@@ -1,0 +1,10 @@
+#ifndef MEMORY_TEST_H
+#define MEMORY_TEST_H
+
+//////////////////////////////
+
+void MemoryTest00();
+
+//////////////////////////////
+
+#endif

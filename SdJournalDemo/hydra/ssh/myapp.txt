@@ -1,0 +1,164 @@
+yl@vm:~/proj/SdJournalDemo/build$ ./SdJournalDemo 
+[SSH] Log: MESSAGE=Invalid user aaaa from 192.168.56.1 port 50592
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787071932535, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50592, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user aaaa from 192.168.56.1 port 50598
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072293837, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50598, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user bbbb from 192.168.56.1 port 50636
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072308092, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50636, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user bbbb from 192.168.56.1 port 50638
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072310802, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50638, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user bbbb from 192.168.56.1 port 50654
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072316258, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50654, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user bbbb from 192.168.56.1 port 50660
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072341183, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50660, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user bbbb from 192.168.56.1 port 50676
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072341381, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50676, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user aaaa from 192.168.56.1 port 50604
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072356916, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50604, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user aaaa from 192.168.56.1 port 50640
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072358491, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50640, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user aaaa from 192.168.56.1 port 50600
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072375435, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50600, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user aaaa from 192.168.56.1 port 50602
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787072377636, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50602, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user bbbb from 192.168.56.1 port 50636 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074419650, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50636, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user bbbb from 192.168.56.1 port 50654 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074427364, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50654, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user bbbb from 192.168.56.1 port 50638 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074430273, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50638, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user aaaa from 192.168.56.1 port 50598 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074437395, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50598, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user bbbb from 192.168.56.1 port 50660 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074447458, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50660, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for root from 192.168.56.1 port 50662 ssh2
+[SSH] Hit: MESSAGE=Failed password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074447487, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=root, loginDomain=, status=2, userId=0, clientPort=50662, subjectUserId=0
+
+[SSH] Log: MESSAGE=Failed password for invalid user bbbb from 192.168.56.1 port 50676 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074467406, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=bbbb, loginDomain=, status=2, userId=, clientPort=50676, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for root from 192.168.56.1 port 50696 ssh2
+[SSH] Hit: MESSAGE=Failed password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074471319, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=root, loginDomain=, status=2, userId=0, clientPort=50696, subjectUserId=0
+
+[SSH] Log: MESSAGE=Failed password for invalid user aaaa from 192.168.56.1 port 50640 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074471553, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50640, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user aaaa from 192.168.56.1 port 50604 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074475408, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50604, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for root from 192.168.56.1 port 50694 ssh2
+[SSH] Hit: MESSAGE=Failed password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074483647, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=root, loginDomain=, status=2, userId=0, clientPort=50694, subjectUserId=0
+
+[SSH] Log: MESSAGE=Failed password for invalid user aaaa from 192.168.56.1 port 50602 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074486089, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50602, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user aaaa from 192.168.56.1 port 50600 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074486502, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=aaaa, loginDomain=, status=2, userId=, clientPort=50600, subjectUserId=
+
+[SSH] Log: MESSAGE=Accepted password for user1 from 192.168.56.1 port 54276 ssh2
+[SSH] Hit: MESSAGE=Accepted password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787074844361, bLoginSuccess=1, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=1, userId=1001, clientPort=54276, subjectUserId=1001
+
+[SSH] Log: MESSAGE=Invalid user cccc from 192.168.56.1 port 54314
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787074939179, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54314, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user cccc from 192.168.56.1 port 54324
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787075144795, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54324, subjectUserId=
+
+[SSH] Log: MESSAGE=Disconnected from user user1 192.168.56.1 port 54276
+[SSH] Hit: MESSAGE=Disconnected from user (\w+) ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=2, time=1694787075488479, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=3, userId=1001, clientPort=54276, subjectUserId=1001
+
+[SSH] Log: MESSAGE=Invalid user cccc from 192.168.56.1 port 54338
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787075844280, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54338, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user cccc from 192.168.56.1 port 54340
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787075864320, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54340, subjectUserId=
+
+[SSH] Log: MESSAGE=Invalid user cccc from 192.168.56.1 port 54344
+[SSH] Hit: MESSAGE=Invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+)
+type=1, time=1694787075865050, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54344, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for user1 from 192.168.56.1 port 54260 ssh2
+[SSH] Hit: MESSAGE=Failed password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787076855488, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=2, userId=1001, clientPort=54260, subjectUserId=1001
+
+[SSH] Log: MESSAGE=Failed password for user1 from 192.168.56.1 port 54282 ssh2
+[SSH] Hit: MESSAGE=Failed password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787076866742, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=2, userId=1001, clientPort=54282, subjectUserId=1001
+
+[SSH] Log: MESSAGE=Failed password for user1 from 192.168.56.1 port 54296 ssh2
+[SSH] Hit: MESSAGE=Failed password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787076868781, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=user1, loginDomain=, status=2, userId=1001, clientPort=54296, subjectUserId=1001
+
+[SSH] Log: MESSAGE=Failed password for invalid user cccc from 192.168.56.1 port 54314 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787077002838, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54314, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user cccc from 192.168.56.1 port 54324 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787077370283, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54324, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user cccc from 192.168.56.1 port 54340 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787078054813, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54340, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user cccc from 192.168.56.1 port 54338 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787078054909, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54338, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for invalid user cccc from 192.168.56.1 port 54344 ssh2
+[SSH] Hit: MESSAGE=Failed password for invalid user (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787078057623, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=cccc, loginDomain=, status=2, userId=, clientPort=54344, subjectUserId=
+
+[SSH] Log: MESSAGE=Failed password for root from 192.168.56.1 port 54352 ssh2
+[SSH] Hit: MESSAGE=Failed password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787078066426, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=root, loginDomain=, status=2, userId=0, clientPort=54352, subjectUserId=0
+
+[SSH] Log: MESSAGE=Failed password for root from 192.168.56.1 port 54360 ssh2
+[SSH] Hit: MESSAGE=Failed password for (\w+) from ((\d{1,3}\.){3}\d{1,3}) port (\d+) ssh2
+type=1, time=1694787078071637, bLoginSuccess=0, loginType=3, clientIp=192.168.56.1, clientWorkstation=vm, loginUser=root, loginDomain=, status=2, userId=0, clientPort=54360, subjectUserId=0

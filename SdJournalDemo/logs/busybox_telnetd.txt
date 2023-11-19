@@ -1,0 +1,303 @@
+【场景1】
+// 服务端
+$ sudo busybox telnetd -l /usr/bin/login -p 23023
+
+// 客户端
+$ telnet 192.168.56.2 23023
+Trying 192.168.56.2...
+Connected to 192.168.56.2.
+Escape character is '^]'.
+
+Ubuntu 20.04.6 LTS
+vm login: user1
+Password: 
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-83-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+8 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '22.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: 日 9月 17 10:26:50 CST 2023 on pts/1
+$ 
+
+客户端输入用户名密码，服务端journald日志：
+
+// 登陆成功
+9月 25 15:11:11 vm login[4394]: pam_unix(login:session): session opened for user user2 by LOGIN(uid=0)
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_AUDIT_LOGINUID=1002(20)
+_AUDIT_SESSION=22(17)
+MESSAGE=pam_unix(login:session): session opened for user user2 by LOGIN(uid=0)(78)
+_BOOT_ID=c46279598a1a4ee7bf96ec1c76d244a5(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(71)
+_SYSTEMD_INVOCATION_ID=9eff4e6ff39b4364b20a4abfcff918c9(55)
+_CMDLINE=/usr/bin/login(23)
+SYSLOG_PID=4394(15)
+_PID=4394(9)
+SYSLOG_TIMESTAMP=Sep 25 15:11:11 (33)
+_SOURCE_REALTIME_TIMESTAMP=1695625871721036(43)
+-----------------------
+
+// 退出
+9月 25 15:11:21 vm login[4394]: pam_unix(login:session): session closed for user user2
+
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+PRIORITY=6(10)
+_UID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_AUDIT_LOGINUID=1002(20)
+_GID=1002(9)
+MESSAGE=pam_unix(login:session): session closed for user user2(62)
+_AUDIT_SESSION=22(17)
+_BOOT_ID=c46279598a1a4ee7bf96ec1c76d244a5(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(71)
+_SYSTEMD_INVOCATION_ID=9eff4e6ff39b4364b20a4abfcff918c9(55)
+_CMDLINE=/usr/bin/login(23)
+SYSLOG_PID=4394(15)
+_PID=4394(9)
+SYSLOG_TIMESTAMP=Sep 25 15:11:21 (33)
+_SOURCE_REALTIME_TIMESTAMP=1695625881894155(43)
+-----------------------
+
+
+// 用户名正确，密码错误
+9月 25 15:11:36 vm login[4449]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=  user=user2
+9月 25 15:11:39 vm login[4449]: FAILED LOGIN (1) on '/dev/pts/2' from '[::ffff:192.168.56.1]:47828' FOR 'user2', Authentication failure
+
+-----------------------
+
+9月 25 15:11:36 vm login[4449]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=  user=user2
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_BOOT_ID=c46279598a1a4ee7bf96ec1c76d244a5(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(71)
+_SYSTEMD_INVOCATION_ID=9eff4e6ff39b4364b20a4abfcff918c9(55)
+_CMDLINE=/usr/bin/login(23)
+MESSAGE=pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=  user=user2(121)
+SYSLOG_PID=4449(15)
+SYSLOG_TIMESTAMP=Sep 25 15:11:36 (33)
+_PID=4449(9)
+_SOURCE_REALTIME_TIMESTAMP=1695625896842067(43)
+-----------------------
+
+9月 25 15:11:39 vm login[4449]: FAILED LOGIN (1) on '/dev/pts/2' from '[::ffff:192.168.56.1]:47828' FOR 'user2', Authentication failure
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_BOOT_ID=c46279598a1a4ee7bf96ec1c76d244a5(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(71)
+_SYSTEMD_INVOCATION_ID=9eff4e6ff39b4364b20a4abfcff918c9(55)
+_CMDLINE=/usr/bin/login(23)
+SYSLOG_PID=4449(15)
+_PID=4449(9)
+SYSLOG_TIMESTAMP=Sep 25 15:11:39 (33)
+MESSAGE=FAILED LOGIN (1) on '/dev/pts/2' from '[::ffff:192.168.56.1]:47828' FOR 'user2', Authentication failure(111)
+_SOURCE_REALTIME_TIMESTAMP=1695625899856800(43)
+-----------------------
+
+// 用户名和密码都错误
+9月 25 15:10:56 vm login[4394]: pam_unix(login:auth): check pass; user unknown
+9月 25 15:10:56 vm login[4394]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=
+9月 25 15:10:59 vm login[4394]: FAILED LOGIN (1) on '/dev/pts/2' from '[::ffff:192.168.56.1]:58444' FOR 'UNKNOWN', Authentication failure
+
+-----------------------
+
+9月 25 15:10:56 vm login[4394]: pam_unix(login:auth): check pass; user unknown
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+MESSAGE=pam_unix(login:auth): check pass; user unknown(54)
+_BOOT_ID=c46279598a1a4ee7bf96ec1c76d244a5(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(71)
+_SYSTEMD_INVOCATION_ID=9eff4e6ff39b4364b20a4abfcff918c9(55)
+_CMDLINE=/usr/bin/login(23)
+SYSLOG_PID=4394(15)
+SYSLOG_TIMESTAMP=Sep 25 15:10:56 (33)
+_PID=4394(9)
+_SOURCE_REALTIME_TIMESTAMP=1695625856549401(43)
+-----------------------
+
+9月 25 15:10:56 vm login[4394]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_BOOT_ID=c46279598a1a4ee7bf96ec1c76d244a5(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(71)
+_SYSTEMD_INVOCATION_ID=9eff4e6ff39b4364b20a4abfcff918c9(55)
+_CMDLINE=/usr/bin/login(23)
+MESSAGE=pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=(109)
+SYSLOG_PID=4394(15)
+SYSLOG_TIMESTAMP=Sep 25 15:10:56 (33)
+_PID=4394(9)
+SYSLOG_RAW=<85>Sep 25 15:10:56 login[4394]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/pts/2 ruser= rhost= (146)
+_SOURCE_REALTIME_TIMESTAMP=1695625856549449(43)
+-----------------------
+
+9月 25 15:10:59 vm login[4394]: FAILED LOGIN (1) on '/dev/pts/2' from '[::ffff:192.168.56.1]:58444' FOR 'UNKNOWN', Authentication failure
+
+PRIORITY=5(10)
+_MACHINE_ID=e220885a68fa4ab2aceec739ffba2683(44)
+_HOSTNAME=vm(12)
+_UID=0(6)
+_GID=0(6)
+_SELINUX_CONTEXT=unconfined
+(28)
+_CAP_EFFECTIVE=1ffffffffff(26)
+_TRANSPORT=syslog(17)
+SYSLOG_FACILITY=10(18)
+_AUDIT_LOGINUID=1000(20)
+_AUDIT_SESSION=2(16)
+_SYSTEMD_OWNER_UID=1000(23)
+_SYSTEMD_UNIT=user@1000.service(31)
+_SYSTEMD_SLICE=user-1000.slice(30)
+_SYSTEMD_USER_SLICE=apps-org.gnome.Terminal.slice(49)
+SYSLOG_IDENTIFIER=login(23)
+_COMM=login(11)
+_EXE=/usr/bin/login(19)
+_BOOT_ID=c46279598a1a4ee7bf96ec1c76d244a5(41)
+_SYSTEMD_CGROUP=/user.slice/user-1000.slice/user@1000.service/apps.slice/apps-org.gnome.Terminal.slice/vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(155)
+_SYSTEMD_USER_UNIT=vte-spawn-cfb4cdb8-6a99-4043-a466-39c634ec2ea1.scope(71)
+_SYSTEMD_INVOCATION_ID=9eff4e6ff39b4364b20a4abfcff918c9(55)
+_CMDLINE=/usr/bin/login(23)
+SYSLOG_PID=4394(15)
+_PID=4394(9)
+SYSLOG_TIMESTAMP=Sep 25 15:10:59 (33)
+MESSAGE=FAILED LOGIN (1) on '/dev/pts/2' from '[::ffff:192.168.56.1]:58444' FOR 'UNKNOWN', Authentication failure(113)
+_SOURCE_REALTIME_TIMESTAMP=1695625859829715(43)
+-----------------------
+
+【场景2】
+// 服务端
+$ busybox telnetd -l /usr/bin/sh -p 23023
+
+// 客户端
+$ telnet 192.168.56.2 23023
+Trying 192.168.56.2...
+Connected to 192.168.56.2.
+Escape character is '^]'.
+
+Ubuntu 20.04.6 LTS
+$ ls
+login.sh  SdJournalDemo
+
+服务端journald无日志
+
+【监控方法】
+$ sudo netstat -anput
+tcp6       0      0 :::23023                :::*                    LISTEN      5840/busybox
+tcp6       0      0 192.168.56.2:23023      192.168.56.1:46916      ESTABLISHED 5840/busybox

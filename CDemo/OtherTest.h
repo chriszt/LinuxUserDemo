@@ -1,0 +1,10 @@
+#ifndef OTHER_TEST_H
+#define OTHER_TEST_H
+
+//////////////////////////////
+
+void OtherTest00();
+
+//////////////////////////////
+
+#endif
