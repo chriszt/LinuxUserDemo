@@ -1,12 +1,13 @@
 // #include "StreamTest.h"
 // #include "TimeTest.h"
-#include "StringTest.h"
+// #include "StringTest.h"
 // #include "RegexTest.h"
 // #include "TupleTest.h"
 // #include "VectorTest.h"
 // #include "FuncTest.h"
 // #include "MemoryTest.h"
 // #include "SetTest.h"
+#include "ExamTest.h"
 
 // [1] http://c.biancheng.net/stl/algorithms/
 
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
     // TimeTest00();
 
     // StringTest00();
-    StringTest01();
+    // StringTest01();
     // StringTest02();
 
     // RegexTest00();
@@ -100,6 +101,8 @@ int main(int argc, char *argv[])
     // MemoryTest00();
 
     // SetTest00();
+
+    ExamTest00();
 
     return 0;
 }

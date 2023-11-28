@@ -1,0 +1,10 @@
+#ifndef EXAM_TEST_H
+#define EXAM_TEST_H
+
+//////////////////////////////
+
+void ExamTest00();
+
+//////////////////////////////
+
+#endif
