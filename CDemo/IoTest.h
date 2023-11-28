@@ -1,0 +1,10 @@
+#ifndef IO_TEST_H
+#define IO_TEST_H
+
+//////////////////////////////
+
+void IoTest00(int argc, char *argv[]);
+
+//////////////////////////////
+
+#endif
