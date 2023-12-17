@@ -29,9 +29,9 @@ public:
 void ExamTest00()
 {
     Solution s;
-    std::cout << s.EqualSubString("abcd", "bcdf", 3) << std::endl;
+    // std::cout << s.EqualSubString("abcd", "bcdf", 3) << std::endl;
     std::cout << s.EqualSubString("abcd", "cdef", 3) << std::endl;
-    std::cout << s.EqualSubString("abcd", "acde", 0) << std::endl;
+    // std::cout << s.EqualSubString("abcd", "acde", 0) << std::endl;
 }
 
 ////////////////////////////////////////////////////////////

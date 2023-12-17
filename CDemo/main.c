@@ -1,11 +1,11 @@
-// #include "ProcessTest.h"
+#include "ProcessTest.h"
 // #include "NotifyTest.h"
 // #include "SyslogTest.h"
 // #include "SigTest.h"
 // #include "TimeTest.h"
 // #include "OtherTest.h"
 // #include "LoginTest.h"
-#include "IoTest.h"
+// #include "IoTest.h"
 
 int main(int argc, char *argv[])
 {
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     // ProcessTest07();
     // ProcessTest08();
     // ProcessTest09();
-    // ProcessTest10();
+    ProcessTest10();
 
     // NotifyTest00();
     // NotifyTest01(argc, argv);
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     // LoginTest03();
     // LoginTest04();
 
-    IoTest00(argc, argv);
+    // IoTest00(argc, argv);
 
     return 0;
 }

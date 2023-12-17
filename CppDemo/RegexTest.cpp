@@ -3,6 +3,9 @@
 #include <iostream>
 #include <regex>
 #include <fstream>
+#include <cstdio>
+#include <cstring>
+#include <cerrno>
 #include <unistd.h>
 
 ////////////////////////////////////////////////////////////
@@ -568,6 +571,63 @@ void RegexTest84()
     std::cout << "isMatch: " << isMatch << std::endl;
     isMatch = std::regex_search(msg2, express);
     std::cout << "isMatch: " << isMatch << std::endl;
+}
+
+////////////////////////////////////////////////////////////
+
+struct LogMsg {
+    long time;
+    std::string protoName;
+    pid_t protoPid;
+    std::string msg;
+};
+
+static std::shared_ptr<LogMsg> ParseLogMsg(std::string msg)
+{
+    auto logMsg = std::make_shared<LogMsg>();
+    if (!logMsg) {
+        return nullptr;
+    }
+    auto leftSquareIndex = msg.find('[');
+    if (leftSquareIndex == std::string::npos) {
+        return nullptr;
+    }
+    auto beforeProtoIndex = msg.rfind(' ', leftSquareIndex);
+    logMsg->protoName = msg.substr(beforeProtoIndex + 1, leftSquareIndex - beforeProtoIndex - 1);
+    auto rightSquareIndex = msg.find(']', leftSquareIndex);
+    auto pidStr = msg.substr(leftSquareIndex + 1, rightSquareIndex - leftSquareIndex - 1);
+    try {
+        logMsg->protoPid = std::stoi(pidStr);
+    } catch (const std::exception &e) {
+        std::fprintf(stderr, "convert pidStr to pid failed: %s\n", e.what());
+    }
+    auto msgBeginIndex = rightSquareIndex + 3;
+    auto msgEnterIndex = msg.rfind('\n');
+    logMsg->msg = msg.substr(msgBeginIndex, msgEnterIndex -  msgBeginIndex);
+    return logMsg;
+}
+
+void RegexTest90()
+{
+    FILE *fp = popen("journalctl -f SYSLOG_IDENTIFIER=sshd", "r");
+    if (!fp) {
+        std::fprintf(stdout, "popen failed(%d): %s\n", errno, strerror(errno));
+        return;
+    }
+    while (true) {
+        char buf[1024];
+        if (!std::fgets(buf, sizeof(buf), fp)) {
+            continue;
+        }
+        std::string msg(buf);
+        // std::fprintf(stdout, "%s", msg.c_str());
+        auto logMsg = ParseLogMsg(msg);
+        if (!logMsg) {
+            continue;
+        }
+        std::fprintf(stdout, "%s | %d | %s\n", logMsg->protoName.c_str(), logMsg->protoPid, logMsg->msg.c_str());
+    }
+    pclose(fp);
 }
 
 ////////////////////////////////////////////////////////////

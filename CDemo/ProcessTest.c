@@ -7,6 +7,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <dirent.h>
+#include <poll.h>
 #include <sys/wait.h>
 
 ////////////////////////////////////////////////////////////
@@ -304,7 +305,29 @@ void ProcessTest09()
 
 void ProcessTest10()
 {
+    char buf[1024];
+    FILE *fp = popen("journalctl -f SYSLOG_IDENTIFIER=sshd", "r");
+    if (!fp) {
+        fprintf(stderr, "open pipe failed(%d): %s\n", errno, strerror(errno));
+        return;
+    }
 
+    // while (1) {
+    //     int bytesOfRead = fread(buf, 1, sizeof(buf), fp);
+    //     fprintf(stdout, "%s(%d)\n", buf, bytesOfRead);
+    // }
+    
+    // struct pollfd fd;
+    // fd.fd = fp->_fileno;
+    // fd.events = POLLIN;
+    while (1) {
+        memset(buf, 0, sizeof(buf));
+        // poll(&fd, 1, -1);
+        char *ret = fgets(buf, sizeof(buf), fp);
+        fprintf(stdout, "%s, %s", buf, ret);
+    }
+    pclose(fp);
+    fprintf(stdout, "read finished\n");
 }
 
 ////////////////////////////////////////////////////////////
