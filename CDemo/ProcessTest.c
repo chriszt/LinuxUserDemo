@@ -320,8 +320,8 @@ void ProcessTest10()
     // struct pollfd fd;
     // fd.fd = fp->_fileno;
     // fd.events = POLLIN;
-    while (1) {
-        memset(buf, 0, sizeof(buf));
+    int isExit = 0;
+    while (!isExit) {
         // poll(&fd, 1, -1);
         char *ret = fgets(buf, sizeof(buf), fp);
         fprintf(stdout, "%s, %s", buf, ret);
