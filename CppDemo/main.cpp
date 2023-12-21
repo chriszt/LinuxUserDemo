@@ -7,6 +7,7 @@
 // #include "FuncTest.h"
 // #include "MemoryTest.h"
 // #include "SetTest.h"
+// #include "StackTest.h"
 // #include "ExamTest.h"
 #include "TreeTest.h"
 
@@ -108,7 +109,10 @@ int main(int argc, char *argv[])
     // ExamTest00();
 
     // TreeTest00();
-    TreeTest01();
+    // TreeTest01();
+    TreeTest02();
+
+    // StackTest00();
 
     return 0;
 }

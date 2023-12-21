@@ -58,6 +58,10 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "condition_variable": "cpp",
+        "cstring": "cpp",
+        "map": "cpp",
+        "shared_mutex": "cpp"
     }
 }
