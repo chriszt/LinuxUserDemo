@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <stack>
+#include <queue>
 #include <stdlib.h>
 
 ////////////////////////////////////////////////////////////
@@ -250,6 +251,27 @@ static void PostOrderTraverse02(BiTree02 tree)
     }
 }
 
+static void LevelOrderTraverse02(BiTree02 tree)
+{
+    if (!tree) {
+        return;
+    }
+    std::queue<BiTNode02 *> q;
+    BiTNode02 *p = tree;
+    q.push(p);
+    while (!q.empty()) {
+        p = q.front();
+        q.pop();
+        std::fprintf(stdout, "%d ", p->data);
+        if (p->lchild) {
+            q.push(p->lchild);
+        }
+        if (p->rchild) {
+            q.push(p->rchild);
+        }
+    }
+}
+
 static void DestoryTree02(BiTree02 tree)
 {
     if (tree == nullptr) {
@@ -273,7 +295,101 @@ void TreeTest02()
     std::fprintf(stdout, "\n");
     PostOrderTraverse02(tree);
     std::fprintf(stdout, "\n");
+    LevelOrderTraverse02(tree);
+    std::fprintf(stdout, "\n");
     DestoryTree02(tree);
+}
+
+////////////////////////////////////////////////////////////
+
+static int g_set03[5];
+
+static void PowerSet03(int i, int n)
+{
+    if (i > n) {
+        for (int j = 1; j <= n; j++) {
+            if (g_set03[j] == 1) {
+                std::fprintf(stdout, "%d ", j);
+            }
+        }
+        std::fprintf(stdout, "\n");
+    } else {
+        g_set03[i] = 1;
+        PowerSet03(i + 1, n);
+        g_set03[i] = 0;
+        PowerSet03(i + 1, n);
+    }
+}
+
+void TreeTest03()
+{
+    int n = 3;
+    for (int i = 0; i < 5; i++) {
+        g_set03[i] = 0;
+    }
+    PowerSet03(1, n);
+}
+
+////////////////////////////////////////////////////////////
+
+static int g_queenes04[8] = {0};
+static int g_count04 = 0;
+
+static int Check04(int line, int list)
+{
+    for (int index = 0; index < line; index++) {
+        int data = g_queenes04[index];
+        if (list == data) {
+            return 0;
+        }
+        if ((index + data) == (line + list)) {
+            return 0;
+        }
+        if ((index - data) == (line - list)) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+static void Print04()
+{
+    for (int line = 0; line < 8; line++) {
+        int list;
+        for (list = 0; list < g_queenes04[line]; list++) {
+            std::fprintf(stdout, "0");
+        }
+        std::fprintf(stdout, "#");
+        for (list = g_queenes04[line] + 1; list < 8; list++) {
+            std::fprintf(stdout, "0");
+        }
+        std::fprintf(stdout, "\n");
+    }
+    std::fprintf(stdout, "==========\n");
+}
+
+static void EightQueen04(int line)
+{
+    for (int list = 0; list < 8; list++) {
+        if (Check04(line, list)) {
+            g_queenes04[line] = list;
+            if (line == 7) {
+                g_count04++;
+                Print04();
+                g_queenes04[line] = 0;
+                return;
+            }
+            EightQueen04(line + 1);
+            g_queenes04[line] = 0;
+        }
+    }
+}
+
+// http://data.biancheng.net/view/34.html
+void TreeTest04()
+{
+    EightQueen04(0);
+    std::fprintf(stdout, "g_count04=%d\n", g_count04);
 }
 
 ////////////////////////////////////////////////////////////

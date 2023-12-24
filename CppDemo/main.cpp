@@ -7,9 +7,11 @@
 // #include "FuncTest.h"
 // #include "MemoryTest.h"
 // #include "SetTest.h"
+// #include "DqueueTest.h"
 // #include "StackTest.h"
 // #include "ExamTest.h"
 #include "TreeTest.h"
+// #include "SigTest.h"
 
 // [1] http://c.biancheng.net/stl/algorithms/
 
@@ -106,13 +108,21 @@ int main(int argc, char *argv[])
 
     // SetTest00();
 
+    // DqueueTest00();
+
     // ExamTest00();
 
     // TreeTest00();
     // TreeTest01();
-    TreeTest02();
+    // TreeTest02();
+    // TreeTest03();
+    TreeTest04();
 
     // StackTest00();
+
+    // SigTest00();
+    // SigTest01();
+    // SigTest02();
 
     return 0;
 }
