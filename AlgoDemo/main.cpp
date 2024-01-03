@@ -12,7 +12,8 @@ int main(int argc, char *argv[])
     // TreeTest03();
     // TreeTest04();
 
-    GraphTest00();
+    // GraphTest00();
+    GraphTest01();
 
     return 0;
 }
