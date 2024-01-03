@@ -1,0 +1,10 @@
+#ifndef GRAPH_TEST_H
+#define GRAPH_TEST_H
+
+//////////////////////////////
+
+void GraphTest00();
+
+//////////////////////////////
+
+#endif

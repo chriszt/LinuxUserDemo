@@ -1,0 +1,11 @@
+#include "GraphTest.h"
+#include <iostream>
+
+//////////////////////////////
+
+void GraphTest00()
+{
+
+}
+
+//////////////////////////////
